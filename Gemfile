@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 source 'http://gemcutter.org'
 
 require 'rubygems'
-require 'mongo'
+#require 'mongo'
 
 gem 'rails', '3.0.7'
 gem 'mongo_mapper'
