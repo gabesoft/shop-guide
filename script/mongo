@@ -1,0 +1,1 @@
+sudo /usr/local/mongodb/bin/mongod --config /usr/local/mongodb/mongodb.conf
