@@ -1,0 +1,10 @@
+#!/bin/bash
+# starts the mongo db console
+
+# show dbs            - display all databases
+# use db_Name         - switch to db_name
+# show collections    - show a list of collections in the current database
+# db.products.find()  - show the first 10 items in the products collection
+# db.products.findOne( { name : "milk" } )
+
+sudo /usr/local/mongodb/bin/mongo localhost:27017/shop-guide-db-development

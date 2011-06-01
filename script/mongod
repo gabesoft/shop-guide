@@ -1,1 +1,4 @@
+#!/bin/bash
+# starts the mongo db server
+
 sudo /usr/local/mongodb/bin/mongod --config /usr/local/mongodb/mongodb.conf
