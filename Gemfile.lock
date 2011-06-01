@@ -40,6 +40,11 @@ GEM
     eventmachine (0.12.10)
     factory_girl (1.3.3)
     haml (3.1.1)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.5.0)
     json (1.5.1)
     mail (2.2.19)
@@ -87,6 +92,11 @@ GEM
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
+    rspec-rails (2.6.1)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.6.0)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -108,10 +118,12 @@ DEPENDENCIES
   bson_ext
   factory_girl
   haml
+  haml-rails
   json
   mongo_mapper
   rails (= 3.0.7)
   rails3-generators
   rspec
+  rspec-rails
   thin
   webrat

@@ -47,8 +47,10 @@ module ShopGuide
     config.filter_parameters += [:password]
 
     config.generators do |g|
-      g.fixture_replacement :factory_girl
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
       g.orm :mongo_mapper
+      g.template_engine :haml
+      g.test_framework :rspec, :fixture => true, :views => false
     end
   end
 end
