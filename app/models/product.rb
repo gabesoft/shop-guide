@@ -28,13 +28,15 @@ class Product
 
   # todo: fix subjectivity to race conditions
   #       make sure the generated slug is url encoded
+  # generates a slug only if one hasn't been generated already
   def create_slug
     return if self.name.blank?
+    return if self.slug
     tail, count = "", 1
     initial = convert_to_slug self.name
     while Product.find_by_slug (initial + tail) do
       count += 1
-      tail = "-#{int}"
+      tail = "-#{count}"
     end
     self.slug = initial + tail
   end

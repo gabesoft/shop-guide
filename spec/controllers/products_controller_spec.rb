@@ -24,7 +24,7 @@ describe ProductsController do
   # Product. As you add validations to Product, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    { :name => 'prod x' }
   end
 
   describe "GET index" do
@@ -38,7 +38,7 @@ describe ProductsController do
   describe "GET show" do
     it "assigns the requested product as @product" do
       product = Product.create! valid_attributes
-      get :show, :id => product.id.to_s
+      get :show, :id => product.slug
       assigns(:product).should eq(product)
     end
   end
@@ -53,7 +53,7 @@ describe ProductsController do
   describe "GET edit" do
     it "assigns the requested product as @product" do
       product = Product.create! valid_attributes
-      get :edit, :id => product.id.to_s
+      get :edit, :id => product.slug
       assigns(:product).should eq(product)
     end
   end
@@ -104,18 +104,18 @@ describe ProductsController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Product.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => product.id, :product => {'these' => 'params'}
+        put :update, :id => product.slug, :product => {'these' => 'params'}
       end
 
       it "assigns the requested product as @product" do
         product = Product.create! valid_attributes
-        put :update, :id => product.id, :product => valid_attributes
+        put :update, :id => product.slug, :product => valid_attributes
         assigns(:product).should eq(product)
       end
 
       it "redirects to the product" do
         product = Product.create! valid_attributes
-        put :update, :id => product.id, :product => valid_attributes
+        put :update, :id => product.slug, :product => { :name => 'prod y' }
         response.should redirect_to(product)
       end
     end
@@ -125,7 +125,7 @@ describe ProductsController do
         product = Product.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Product.any_instance.stub(:save).and_return(false)
-        put :update, :id => product.id.to_s, :product => {}
+        put :update, :id => product.slug, :product => {}
         assigns(:product).should eq(product)
       end
 
@@ -133,7 +133,7 @@ describe ProductsController do
         product = Product.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Product.any_instance.stub(:save).and_return(false)
-        put :update, :id => product.id.to_s, :product => {}
+        put :update, :id => product.slug, :product => {}
         response.should render_template("edit")
       end
     end
@@ -143,13 +143,13 @@ describe ProductsController do
     it "destroys the requested product" do
       product = Product.create! valid_attributes
       expect {
-        delete :destroy, :id => product.id.to_s
+        delete :destroy, :id => product.slug
       }.to change(Product, :count).by(-1)
     end
 
     it "redirects to the products list" do
       product = Product.create! valid_attributes
-      delete :destroy, :id => product.id.to_s
+      delete :destroy, :id => product.slug
       response.should redirect_to(products_url)
     end
   end
