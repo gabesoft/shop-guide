@@ -14,6 +14,7 @@ gem 'haml',                   '3.1.1'
 gem 'haml-rails',             '0.3.4'
 gem 'sass',                   '3.1.2'
 gem 'json',                   '1.5.1'
+gem 'json_pure',              '1.5.1'
 gem 'jquery-rails',           '1.0.9'
 
 group :development do
@@ -29,4 +30,9 @@ group :development, :test do
   gem 'database_cleaner',     '0.6.7'
   gem 'webrat',               '0.7.3'
   gem 'nifty-generators',     '0.4.6'
+  gem 'jasmine',              '1.0.2.1'
+  gem 'selenium',             '0.0.5'
+  gem 'selenium-client',      '1.2.18'
+  gem 'selenium-rails',       '0.0.3'
+  gem 'selenium-webdriver',   '0.2.1'
 end
