@@ -5,4 +5,4 @@ $(document).ready ->
     if current_value is ''
       preview.hide().attr 'src', ''
     else
-      preview.show().attr 'src', current_value
+      preview.show().attr 'src', "/#{current_value}"

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sat, 04 Jun 2011 04:10:30 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 04 Jun 2011 04:39:14 GMT from
  * /apps/shop_guide/app/coffeescripts/shorty.coffee
  */
 
@@ -12,7 +12,7 @@
       if (current_value === '') {
         return preview.hide().attr('src', '');
       } else {
-        return preview.show().attr('src', current_value);
+        return preview.show().attr('src', "/" + current_value);
       }
     });
   });

@@ -1,4 +1,5 @@
 ShopGuide::Application.routes.draw do
+  get "pages/preview"
   get "pages/home"
   get "pages/contact"
   get "pages/about"
