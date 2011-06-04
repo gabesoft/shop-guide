@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sat, 04 Jun 2011 04:39:14 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 04 Jun 2011 04:55:11 GMT from
  * /apps/shop_guide/app/coffeescripts/shorty.coffee
  */
 
@@ -6,7 +6,7 @@
   $(document).ready(function() {
     var preview;
     preview = $('#preview-url');
-    return $('#url_url').keyup(function() {
+    return $('#input-url').keyup(function() {
       var current_value;
       current_value = $.trim(this.value);
       if (current_value === '') {

@@ -19,6 +19,10 @@ gem 'jquery-rails',           '1.0.9'
 gem 'coffee-script',          '2.2.0'
 gem 'barista',                '1.2.1'
 
+group :production do
+  gem 'therubyracer-heroku',    '0.8.1.pre3'
+end
+
 group :development do
   gem 'thin',                 '1.2.11'
 end

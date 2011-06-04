@@ -1,6 +1,6 @@
 $(document).ready ->
   preview = $('#preview-url')
-  $('#url_url').keyup ->
+  $('#input-url').keyup ->
     current_value = $.trim @value
     if current_value is ''
       preview.hide().attr 'src', ''
