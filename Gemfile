@@ -16,6 +16,8 @@ gem 'sass',                   '3.1.2'
 gem 'json',                   '1.5.1'
 gem 'json_pure',              '1.5.1'
 gem 'jquery-rails',           '1.0.9'
+gem 'coffee-script',          '2.2.0'
+gem 'barista',                '1.2.1'
 
 group :development do
   gem 'thin',                 '1.2.11'
