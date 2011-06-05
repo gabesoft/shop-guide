@@ -41,10 +41,8 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(
       :name => params[:product][:name],
-      :tags => params[:product][:tags].split(',')
+      :tags => params[:product][:tags].nil? ? [] : params[:product][:tags].split(/, ?/)
     )
-
-    puts @product.inspect
 
     respond_to do |format|
       if @product.save
