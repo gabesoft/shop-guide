@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find_by_slug(params[:id])
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.xml  { render :xml => @product }
     end
   end
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     @product = Product.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.xml  { render :xml => @product }
     end
   end
@@ -39,7 +39,12 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.xml
   def create
-    @product = Product.new(params[:product])
+    @product = Product.new(
+      :name => params[:product][:name],
+      :tags => params[:product][:tags].split(',')
+    )
+
+    puts @product.inspect
 
     respond_to do |format|
       if @product.save
