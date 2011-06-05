@@ -3,7 +3,10 @@ class Product
 
   key :name, String, :required => true
   key :slug, String
-  #key :tags, Array
+  key :tags, Array
+
+  ensure_index :name
+  ensure_index :tags
 
   after_validation :on => :create do
     self.create_slug
@@ -22,12 +25,14 @@ class Product
       ActiveSupport::Inflector.parameterize(str).to_s
     else
       ActiveSupport::Multibyte::Handlers::UTF8Handler.
-        normalize(str,:d).split(//u).reject { |e| e.length > 1 }.join.strip.gsub(/[^a-z0-9]+/i, '-').downcase.gsub(/-+$/, '')
+        normalize(str,:d).split(//u).
+        reject { |e| e.length > 1 }.
+        join.strip.gsub(/[^a-z0-9]+/i, '-').
+        downcase.gsub(/-+$/, '')
     end
   end
 
   # todo: fix subjectivity to race conditions
-  #       make sure the generated slug is url encoded
   # generates a slug only if one hasn't been generated already
   def create_slug
     return if self.name.blank?

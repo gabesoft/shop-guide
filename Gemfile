@@ -33,6 +33,8 @@ group :development, :test do
   gem 'factory_girl',         '1.3.3'
   gem 'factory_girl_rails',   '1.0.1'
   gem 'autotest',             '4.4.6'
+  gem 'autotest-growl'
+  gem 'autotest-fsevent'
   gem 'database_cleaner',     '0.6.7'
   gem 'webrat',               '0.7.3'
   gem 'nifty-generators',     '0.4.6'
