@@ -9,6 +9,13 @@ describe ProductsController do
     { :name => 'prod x', :tags => "a b,c d e, f,g,h, k"}
   end
 
+  def create_products count
+      ( 1 .. count ).
+        to_a.
+        map { |n| Product.create! :name => "p#{n}", 
+                                  :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
+  end
+
   describe "GET index" do
     it "assigns all products as @products" do
       product = Product.create! valid_attributes
@@ -143,11 +150,18 @@ describe ProductsController do
 
   describe "POST destroy_all" do
     it "should destroy all products" do
-      ( 1 .. 10 ).
-        map { |n| "a#{n}" }.
-        map { |p| Product.create! :name => p, :tags => [] }
+      create_products 10
       post :destroy_all 
       Product.all.count.should eq 0
+    end
+  end
+
+  describe "GET extract_all" do
+    it "should return all products in json format" do
+      create_products 10
+      get :extract_all, :format => :json
+      body = JSON.parse response.body
+      body.count.should eq 10
     end
   end
 end

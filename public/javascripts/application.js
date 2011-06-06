@@ -5,6 +5,6 @@ Ext.require('Ext.Component');
 Ext.onReady(function () {
   Ext.create('Ext.Component', {
     renderTo: 'container',
-    html: 'Ready to start coding'
+    html: 'Ext-Js Ready'
   });
 });

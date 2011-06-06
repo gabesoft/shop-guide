@@ -1,6 +1,4 @@
 ShopGuide::Application.routes.draw do
-  # see all routes: rake routes
-
   get "pages/preview"
   get "pages/home"
   get "pages/contact"
@@ -8,8 +6,13 @@ ShopGuide::Application.routes.draw do
 
   root :to => "pages#home"
 
-  resources :products
-  post "products/clear", :to => "products#destroy_all"
+  resources :products do
+    post :clear, :action => :destroy_all, :on => :collection
+    get :all, :action => :extract_all, :on => :collection
+  end
+
+  #post "products/clear", :to => "products#destroy_all"
+  #get "products/all.json", :to => "products#extract_all", :as => :products_all
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

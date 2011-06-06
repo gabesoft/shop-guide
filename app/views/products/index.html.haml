@@ -18,6 +18,8 @@
 
 = link_to 'New Product', new_product_path
 %br/
+= link_to 'Extract All', (all_products_path :format => :json)
 %br/
-%form{ :method => "post", :action => products_clear_path }
+%br/
+%form{ :method => "post", :action => clear_products_path }
   %input{ :type => "submit", :value => "Clear All" }
