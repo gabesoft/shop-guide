@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sat, 04 Jun 2011 04:55:11 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 06 Jun 2011 04:12:55 GMT from
  * /apps/shop_guide/app/coffeescripts/shorty.coffee
  */
 

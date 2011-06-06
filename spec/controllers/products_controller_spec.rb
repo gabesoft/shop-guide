@@ -141,4 +141,13 @@ describe ProductsController do
     end
   end
 
+  describe "POST destroy_all" do
+    it "should destroy all products" do
+      ( 1 .. 10 ).
+        map { |n| "a#{n}" }.
+        map { |p| Product.create! :name => p, :tags => [] }
+      post :destroy_all 
+      Product.all.count.should eq 0
+    end
+  end
 end

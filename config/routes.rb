@@ -1,4 +1,6 @@
 ShopGuide::Application.routes.draw do
+  # see all routes: rake routes
+
   get "pages/preview"
   get "pages/home"
   get "pages/contact"
@@ -7,6 +9,7 @@ ShopGuide::Application.routes.draw do
   root :to => "pages#home"
 
   resources :products
+  post "products/clear", :to => "products#destroy_all"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-  # GET /products
-  # GET /products.xml
   def index
     @products = Product.all
 
@@ -10,8 +8,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1
-  # GET /products/1.xml
   def show
     @product = Product.find_by_slug(params[:id])
     respond_to do |format|
@@ -20,8 +16,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/new
-  # GET /products/new.xml
   def new
     @product = Product.new
 
@@ -31,13 +25,10 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1/edit
   def edit
     @product = Product.find_by_slug(params[:id])
   end
 
-  # POST /products
-  # POST /products.xml
   def create
     @product = Product.new(
       :name => params[:product][:name],
@@ -55,8 +46,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/1
-  # PUT /products/1.xml
   def update
     @product = Product.find_by_slug(params[:id])
 
@@ -71,8 +60,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.xml
   def destroy
     @product = Product.find_by_slug(params[:id])
     @product.destroy
@@ -81,5 +68,11 @@ class ProductsController < ApplicationController
       format.html { redirect_to(products_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def destroy_all
+    # TODO: delete products at the database level
+    Product.all.each { |p| p.destroy }
+    redirect_to products_url
   end
 end

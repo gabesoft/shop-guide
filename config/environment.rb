@@ -5,4 +5,4 @@ require File.expand_path('../application', __FILE__)
 ShopGuide::Application.initialize!
 
 # haml template options
-Haml::Template.options[:format] = :html5
+Haml::Template.options[:format] = :xhtml

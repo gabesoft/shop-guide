@@ -14,6 +14,10 @@
       %td= link_to 'Edit', edit_product_path(product)
       %td= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete
 
-%br
+%br/
 
 = link_to 'New Product', new_product_path
+%br/
+%br/
+%form{ :method => "post", :action => products_clear_path }
+  %input{ :type => "submit", :value => "Clear All" }
