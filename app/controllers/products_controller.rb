@@ -75,4 +75,14 @@ class ProductsController < ApplicationController
     Product.all.each { |p| p.destroy }
     redirect_to products_url
   end
+
+  def extract_all
+    # TODO: return all products in json format
+    redirect_to products_url
+  end
+
+  def save_all
+    # TODO: save all products uploaded
+    redirect_to products_url
+  end
 end
