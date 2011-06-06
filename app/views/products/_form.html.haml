@@ -11,6 +11,6 @@
     = f.text_field :name
   .field
     = f.label :tags
-    = f.text_field :tags
+    = text_field :product, :tags, :value => @product.tags.join()
   .actions
     = f.submit 'Save'

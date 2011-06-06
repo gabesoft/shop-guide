@@ -5,7 +5,7 @@
   = @product.name
 %p
   %b Tags:
-  = @product.tags
+  = @product.tags.join(', ')
 
 = link_to 'Edit', edit_product_path(@product)
 \|
