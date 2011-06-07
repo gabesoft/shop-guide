@@ -3,9 +3,9 @@
 %table
   %tr
     %th Name
-    %th
-    %th
-    %th
+    %th Show
+    %th Edit
+    %th Delete
 
   - @products.each do |product|
     %tr
@@ -22,8 +22,7 @@
 %br/
 %br/
 %form{ :method => "post", :action => clear_products_path }
-  %input{ :type => "submit", :value => "Clear All" }
-%br/
+  %input{ :type => "submit", :value => "Clear All" }/
 - form_tag import_products_path, :multipart => true do
   = label_tag :file, "Import Products:"
   = file_field_tag :file
