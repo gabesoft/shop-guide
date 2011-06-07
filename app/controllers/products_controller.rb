@@ -84,17 +84,19 @@ class ProductsController < ApplicationController
     redirect_to products_url
   end
 
-  def extract_all
-    # TODO: return all products in json format
-    #redirect_to products_url
+  def export
     respond_to do |format|
       format.json { render :json => Product.all }
       format.all { render :text => "only JSON format is supported" }
     end
   end
 
-  def save_all
-    # TODO: save all products uploaded
+  def import
+    file = params[:file]
+    if !file.nil?
+      products = JSON.parse(file.read)
+      products.each { |p| Product.create! p }
+    end
     redirect_to products_url
   end
 end

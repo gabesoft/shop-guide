@@ -8,7 +8,8 @@ ShopGuide::Application.routes.draw do
 
   resources :products do
     post :clear, :action => :destroy_all, :on => :collection
-    get :all, :action => :extract_all, :on => :collection
+    post :import, :action => :import, :on => :collection
+    get :export, :action => :export, :on => :collection
   end
 
   #post "products/clear", :to => "products#destroy_all"

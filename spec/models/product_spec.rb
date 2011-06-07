@@ -27,6 +27,12 @@ describe Product do
     create_products
     dairy = Product.all :tags => "dairy"
     dairy.count.should eq 3
-    dairy.each { |e| puts e.inspect }
+  end
+
+  it "should insert product with id" do
+    Product.create! :name => "autogen id", :tags => [], :id => "myuniqueid"
+    products = Product.all :name => "autogen id"
+    products.count.should eq 1
+    products[0].id.should eq "myuniqueid"
   end
 end

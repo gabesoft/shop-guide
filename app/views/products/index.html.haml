@@ -18,8 +18,13 @@
 
 = link_to 'New Product', new_product_path
 %br/
-= link_to 'Extract All', (all_products_path :format => :json)
+= link_to 'Export All', (export_products_path :format => :json)
 %br/
 %br/
 %form{ :method => "post", :action => clear_products_path }
   %input{ :type => "submit", :value => "Clear All" }
+%br/
+- form_tag import_products_path, :multipart => true do
+  = label_tag :file, "Import Products:"
+  = file_field_tag :file
+  = submit_tag "Upload"

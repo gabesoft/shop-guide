@@ -10,10 +10,10 @@ describe ProductsController do
   end
 
   def create_products count
-      ( 1 .. count ).
-        to_a.
-        map { |n| Product.create! :name => "p#{n}", 
-                                  :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
+    ( 1 .. count ).
+      to_a.
+      map { |n| Product.create! :name => "p#{n}", 
+                                :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
   end
 
   describe "GET index" do
@@ -65,7 +65,7 @@ describe ProductsController do
         post :create, :product => valid_attributes
         response.should redirect_to(Product.last)
       end
-      
+
       it "should set the tags of the created product" do
         post :create, :product => valid_attributes
         assigns(:product).tags.should eq ["a b", "c d e", "f", "g", "h", "k"]
@@ -156,10 +156,18 @@ describe ProductsController do
     end
   end
 
-  describe "GET extract_all" do
+  describe "POST import" do
+    it "should import all products in file" do
+      bulk_json = fixture_file_upload 'spec/files/products.json', 'application/json'
+      post :import, :file => bulk_json
+      Product.all.count.should eq 4
+    end 
+  end
+
+  describe "GET export" do
     it "should return all products in json format" do
       create_products 10
-      get :extract_all, :format => :json
+      get :export, :format => :json
       body = JSON.parse response.body
       body.count.should eq 10
     end
