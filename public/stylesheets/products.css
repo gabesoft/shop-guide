@@ -25,6 +25,7 @@ div.field input {
 p.box {
   margin-bottom: 1em;
   padding: 1em;
+  text-indent: 0;
 }
 
 p.box label {
