@@ -1,4 +1,4 @@
-%h1 Listing products
+%h2 Products List
 
 %table
   %tr
@@ -16,17 +16,20 @@
 
 %br/
 = link_to 'New Product', new_product_path
-%br/
-= link_to 'Export All', (export_products_path :format => :json)
 
 %br/
 %br/
-- form_tag import_products_path, :multipart => true do
-  = label_tag :file, "Import Products:"
-  = file_field_tag :file
-  = submit_tag "Upload"
+%p
+  %h2 Bulk Admin
+%div.bulk.box
+  - form_tag import_products_path, :multipart => true do
+    = label_tag :file, "Import:"
+    = file_field_tag :file
+    = submit_tag "Upload"
 
-%br/
-- form_tag clear_products_path do
-  = label_tag "Clear Products:"
-  = submit_tag "Delete All"
+  %br/
+  - form_tag clear_products_path do
+    = submit_tag "Delete All"
+
+  - form_tag (export_products_path :format => :json) do
+    = submit_tag "Export All"

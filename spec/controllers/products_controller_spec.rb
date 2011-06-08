@@ -164,10 +164,10 @@ describe ProductsController do
     end 
   end
 
-  describe "GET export" do
+  describe "POST export" do
     it "should return all products in json format" do
       create_products 10
-      get :export, :format => :json
+      post :export, :format => :json
       body = JSON.parse response.body
       body.count.should eq 10
     end
