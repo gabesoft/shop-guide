@@ -40,3 +40,12 @@ p.box span {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1em;
 }
+
+div.bulk label {
+  float: left;
+  display: block;
+  width: 70px;
+  text-align: left;
+  clear: left;
+  margin-right: 10px;
+}
