@@ -1,11 +1,15 @@
+%h2 Product details
+
 %p#notice= notice
 
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Tags:
-  = @product.tags.join(', ')
+%p.box
+  %label Name:
+  %span
+    = @product.name
+%p.box
+  %label Tags:
+  %span
+    = @product.tags.join(', ')
 
 = link_to 'Edit', edit_product_path(@product)
 \|

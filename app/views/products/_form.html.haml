@@ -8,9 +8,9 @@
 
   .field
     = f.label :name
-    = f.text_field :name
+    = f.text_field :name, :class => 'text'
   .field
     = f.label :tags
-    = f.text_field :tags, :value => f.object.tags.join(', ')
+    = f.text_field :tags, :class => 'text', :value => f.object.tags.join(', ')
   .actions
     = f.submit 'Save'

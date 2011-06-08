@@ -1,0 +1,37 @@
+div.field {
+  clear: both;
+  float: none;
+}
+
+div.field label {
+  float: left;
+  display: block;
+
+  width: 50px;
+  text-align: right;
+  clear: left;
+  margin-right: 10px;
+  background-color:	#F0F0F0;
+  padding: 4px;
+  margin: 0.4em 0.2em;
+}
+
+div.field input {
+  background-color: #FBEF99;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: .9em;
+}
+
+p.box label {
+  float: left;
+  display: block;
+  width: 70px;
+  text-align: right;
+  clear: left;
+  margin-right: 10px;
+}
+
+p.box span {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1em;
+}
