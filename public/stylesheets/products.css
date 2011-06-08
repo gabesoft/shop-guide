@@ -22,6 +22,11 @@ div.field input {
   font-size: .9em;
 }
 
+p.box {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
 p.box label {
   float: left;
   display: block;
