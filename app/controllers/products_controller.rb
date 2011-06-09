@@ -33,10 +33,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(
-      :name => params[:product][:name],
-      :tags => params[:product][:tags].nil? ? [] : params[:product][:tags].split(/, */)
-    )
+    @product = Product.new(:name => paramsName, :tags => paramsTags)
 
     respond_to do |format|
       if @product.save
@@ -55,7 +52,7 @@ class ProductsController < ApplicationController
     @product = Product.find_by_slug(params[:id])
 
     respond_to do |format|
-      if @product.update_attributes(params[:product])
+      if @product.update_attributes(:name => paramsName, :tags => paramsTags)
         format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
         format.xml  { head :ok }
         format.json  { head :ok }
@@ -98,5 +95,13 @@ class ProductsController < ApplicationController
       products.each { |p| Product.create! p }
     end
     redirect_to products_url
+  end
+
+  def paramsName
+    params[:product][:name]
+  end
+
+  def paramsTags
+    params[:product][:tags].nil? ? [] : params[:product][:tags].split(/, */)
   end
 end
