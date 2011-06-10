@@ -30,7 +30,7 @@
   %br/
   - form_tag clear_products_path do
     = label_tag "Delete"
-    = submit_tag "Delete All"
+    = submit_tag "Delete All", :confirm => 'Are you sure?'
 
   - form_tag (export_products_path :format => :json) do
     = label_tag "Export"
