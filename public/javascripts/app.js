@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 19:20:30 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 22:44:26 GMT from
  * /apps/shop_guide/app/coffeescripts/app.coffee
  */
 
@@ -10,8 +10,7 @@
     AppName: 'app',
     Ext: '/javascripts/lib/extjs/src'
   });
-  Ext.require('Ext.Component');
-  Ext.require('Ext.container.Viewport');
+  Ext.require(['Ext.Component', 'Ext.container.Viewport', 'Ext.selection.CheckboxModel', 'Ext.grid.*', 'Ext.data.*']);
   Ext.application({
     name: 'Shop Guide',
     launch: function() {
@@ -25,7 +24,13 @@
           padding: 5
         },
         bodyPadding: 10,
-        items: [searchCombo]
+        items: [
+          {
+            xtype: 'sg-search-combo'
+          }, {
+            xtype: 'sg-search-grid'
+          }
+        ]
       });
     }
   });

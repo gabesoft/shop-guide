@@ -1,39 +1,31 @@
 Ext.define 'SG.search.ComboBox'
   extend: 'Ext.form.ComboBox'
+  alias: 'widget.sg-search-combo'
   initComponent: () ->
-    products = Ext.create('Ext.data.Store',
+    store = Ext.create('Ext.data.Store',
       fields: ['name']
       data: [
-        { name: 'prod a' }
-        { name: 'prod b' }
-        { name: 'prod c' }
+        { name: 'milk' }
+        { name: 'coffee' }
+        { name: 'shaving cream' }
+        { name: 'shampoo' }
       ]
     )
 
     Ext.apply(this,
       fieldLabel: 'Search Products'
-      store: products
+      hideLabel: false
+      hideTrigger: true
+      typeAhead: true
+      store: store
       queryMode: 'local'
       displayField: 'name'
       valueField: 'name'
+      width: 200
+      style: 'margin-top:20px'
+      listConfig:
+        loadingText: 'Searching...'
+        emptyText: 'No matching products found'
     )
 
     @callParent()
-
-#createSearchCombo = () ->
-  #products = Ext.create('Ext.data.Store',
-    #fields: ['name']
-    #data: [
-      #name: 'prod a'
-      #name: 'prod b'
-      #name: 'prod c' 
-    #]
-  #)
-
-  #Ext.create('Ext.form.ComboBox',
-    #fieldLabel: 'Search Products'
-    #store: products
-    #queryMode: 'local'
-    #displayField: 'name'
-    #valueField: 'name'
-  #)

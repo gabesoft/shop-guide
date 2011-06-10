@@ -1,30 +1,42 @@
-/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 18:56:34 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 22:00:21 GMT from
  * /apps/shop_guide/app/coffeescripts/app/search/ComboBox.coffee
  */
 
 (function() {
   Ext.define('SG.search.ComboBox', {
     extend: 'Ext.form.ComboBox',
+    alias: 'widget.sg-search-combo',
     initComponent: function() {
-      var products;
-      products = Ext.create('Ext.data.Store', {
+      var store;
+      store = Ext.create('Ext.data.Store', {
         fields: ['name'],
         data: [
           {
-            name: 'prod a'
+            name: 'milk'
           }, {
-            name: 'prod b'
+            name: 'coffee'
           }, {
-            name: 'prod c'
+            name: 'shaving cream'
+          }, {
+            name: 'shampoo'
           }
         ]
       });
       Ext.apply(this, {
         fieldLabel: 'Search Products',
-        store: products,
+        hideLabel: false,
+        hideTrigger: true,
+        typeAhead: true,
+        store: store,
         queryMode: 'local',
         displayField: 'name',
-        valueField: 'name'
+        valueField: 'name',
+        width: 200,
+        style: 'margin-top:20px',
+        listConfig: {
+          loadingText: 'Searching...',
+          emptyText: 'No matching products found'
+        }
       });
       return this.callParent();
     }
