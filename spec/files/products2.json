@@ -1,0 +1,932 @@
+[
+   {
+      "name" : "100% juice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "A Taste of Thai Lite Coconut Milk",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "A Taste of Thai Rice Noodles, Straight Cut",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Alouette Goat Cheese, Crumbled",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Amy&#039;s Asian Noodle, Stir Fry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Amy&#039;s Enchilada, Black Bean Vegetable",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Amy&#039;s Tamale Verde, Black Bean",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ancient Harvest Quinoa, Inca Red",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ancient Harvest Quinoa, Traditional",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Applegate Farms Turkey Breast, Roasted",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Argo Corn Starch, 100% Pure",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Beans and lentils",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Betty Crocker Frosting, Creamy White",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Betty Crocker Mashed Potatoes",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Blue Diamond almonds",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Blue Diamond Cracker Snacks",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Blue Diamond Non-Dairy Beverage",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Blue Diamond nuts and rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bob&#039;s Red Mill Bread Mix, Hearty",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bob&#039;s Red Mill Flaxseed Meal, Whole Ground",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Fruit Smoothie",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Fruit Smoothie, Berry Boost",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Fruit Smoothie, C-Boost",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Juice, 100% Carrot",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Vinaigrette, Extra Virgin",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Bolthouse Farms Yogurt Dressing",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Brown, white, wild and sweet rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Buddig Corned Beef",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Celestial Seasonings Fruit Tea Sampler",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Celestial Seasonings Herbal Tea",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Cheddar Cheese, aged hard",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Chef&#039;s Requested Beef Filet, Angus",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Cherry Juice Infused",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Cinnamon Chex Cereal",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Classico Pasta Sauce",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Coffee-Mate Coffee Creamer, Sugar Free",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Corn and rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Corn Chex Cereal",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Corn meal",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Dei Fratelli Tomato Sauce",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Del Monte Fruit Smoothie, Ready-to-Blend",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Dinty Moore Beef Stew",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Edam Cheese, aged hard",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Eggs",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Enjoy Life Bars, Soft and Chewy, Cocoa Loco",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Fage Nonfat Greek Strained Yogurt",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Fleischmann&#039;s Yeast, Highly Active, Dry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Food Should Taste Good Tortilla Chips, Multigrain",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Fresh fruit, canned, dried, frozen",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Galaxy Nutritional Foods Veggie Slices",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Breakfast Bars, Blueberry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Cereal, Honey Nut",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Organic Bars, Chocolate &amp; Peanuts",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Pizza, Gluten-Free, Duo Cheese",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Pretzel Twists, Gluten-Free",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Wafer Cookies, Lemon",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Glutino Wafer Cookies, Vanilla",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Grande Tortilla Chips",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Heinz Tomato Ketchup",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Hellmann&#039;s Real Mayonnaise",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Holland House Cooking Wine, White",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Hormel Beef Roast, Au Jus",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Hormel Ham, Deli, Honey",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Hormel Turkey, Deli, Oven Roasted",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "I Can&#039;t Believe It&#039;s Not Butter! 60% Vegetable Oil",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "I.M. Healthy SoyNut Butter, Original Creamy",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Jennie-O Turkey Store Turkey Burgers, 95/5",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Jennie-O Turkey Store Turkey Patties, 95/5",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Justin&#039;s Almond Butter, Classic",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Kettle Potato Chips, Baked, Hickory",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Kettle Potato Chips, Sea Salt",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Kozy Shack All Natural Pudding, Original Rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Kozy Shack Pudding, Original Rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "La Victoria Salsa, Cilantro, Medium",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Lactose-free milk",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Langers Juice, Apple",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Larabar Fruit &amp; Nut Food Bar, Cherry Pie",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Lifeway Kefir Cultured Milk Smoothie",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Maple Grove Farms of Vermont Dressing, Balsamic",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Mary&#039;s Gone Crackers Crackers, Organic, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "McCormick Almond Extract, Pure",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "McCormick Vanilla Extract, Pure",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Meats, poultry, fish, shellfish",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Minute Brown Rice, Natural Whole Grain",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Minute Chicken Rice Mix",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Mountain High Yoghurt, All Natural, Low",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Movie Theater Butter",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Naked Juice Smoothie, Mango",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Nasoya Tofu, Extra Firm",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Nasoya Tofu, Super Firm, Cubed",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Nesquik Milk, Reduced Fat, Chocolate",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Non-dairy milk substitutes (soy, rice)",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Nuts and seeds",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ocean Spray Dried Cranberries,",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Old Orchard 100% Juice, Apple",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Olive Oil, Tropical Mango",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ore-Ida Potatoes, Cut Russet",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ortega Taco Shells, Yellow Corn",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Orville Redenbacher?s Popping Corn, Gourmet,",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Pacific Chicken Broth, Free Range, Low Sodium",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Parmesan Cheese, aged hard",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Peanut butter",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Perdue Chicken Breast, Carved, Grilled",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Pik-Nik Potatoes, Shoestring, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Polaner Fruit Spread, Grape",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Pompeian Balsamic Vinegar",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Pompeian Olive Oil, Extra Virgin",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Pompeian Red Wine Vinegar",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Popcorn",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Potato chips",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Potato, parsnip, turnip, yucca and other tubers",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Potatoes, sweet potatoes, yams",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Prego Italian Sauce, Flavored with Meat",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Prego Italian Sauce, Traditional",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Progresso Soup, Creamy Mushroom",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Progresso Soup, Garden Vegetable",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Progresso Soup, Lentil",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Ready-to-drink tea",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Red Gold Tomatoes, Whole Peeled",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Rice Dream Rice Drink, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Sausages by Amylu Chicken Sausage,",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Schar Bread, Classic White",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Schar Bread, Multigrain",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Schar Penne",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Schar Pizza Crusts",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Schar Rolls, Classic White",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Silk Soymilk, Light, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Silk Soymilk, Light, Vanilla",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Silk Soymilk, Very Vanilla",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Smart Balance Buttery Spread",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Smart Balance Buttery Spread, Non-Hydrogenated",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Smart Balance Natural Peanut Butter",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Smart Balance Peanut Butter, Real, Creamy",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Snikiddy Corn Puffs, Baked, Grilled Cheese Puffs",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Soft drinks",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Spread, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "St. Dalfour Wild Salmon with Vegetables",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Stonyfield Farm Yogurt, Organic, Low Fat",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Strawberry Banana",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Sun Dried Tomato &amp; Basil, Smoked",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Swiss Chess, aged hard",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Think Thin High Protein Bar, Chunky Peanut Butter",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Tinkyada Pasta, Brown Rice, Spaghetti Style",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Tribe Hummus, Classic",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Tribe Hummus, Forty Spices",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Uncle Ben&#039;s Brown Rice, Whole Grain",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Uncle Ben&#039;s Enriched Parboiled Rice",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Van&#039;s Gourmet Waffles, Original",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Van&#039;s Waffles, Blueberry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Wish Bone Dressing, Italian",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Xochitl Authentic Corn Chips, Mexican Style",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Yoplait Yogurt, Fat Free, Blueberry Patc",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Yoplait Yogurt, Light, Fat Free, Very Cherry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Yoplait Yogurt, Low fat, Strawberry",
+      "tags" : [
+         "food"
+      ]
+   },
+   {
+      "name" : "Yoplait Yogurt, Nonfat",
+      "tags" : [
+         "food"
+      ]
+   }
+]
