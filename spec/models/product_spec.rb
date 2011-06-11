@@ -13,7 +13,7 @@ describe Product do
   end
 
   it "should generate a slug for a new product" do
-    product = Product.create :name => "test prod"
+    product = Product.create :name => 'test prod'
     product.slug.should eq 'test-prod'
   end
 
@@ -25,8 +25,14 @@ describe Product do
 
   it "should get product by tags" do
     create_products
-    dairy = Product.all :tags => "dairy"
+    dairy = Product.all :tags => 'dairy'
     dairy.count.should eq 3
+  end
+
+  it "should get products by name or tags" do
+    create_products
+    found = Product.all :$or => [ { :name => /milk/ }, { :tags => 'breakfast' } ]
+    found.count.should eq 4
   end
 
   it "should insert product with id" do

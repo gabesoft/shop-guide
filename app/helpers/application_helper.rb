@@ -1,7 +1,6 @@
 module ApplicationHelper
   def stylesheet_link_extjs
-    #stylesheet_link_tag "extjs/css/ext-all"
-    stylesheet_link_tag "../javascripts/lib/extjs/resources/css/ext-all"
+    stylesheet_link_tag "/javascripts/lib/extjs/resources/css/ext-all"
   end
 
   def javascript_include_extjs

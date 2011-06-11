@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 22:00:21 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 11 Jun 2011 04:15:30 GMT from
  * /apps/shop_guide/app/coffeescripts/app/search/ComboBox.coffee
  */
 
@@ -26,7 +26,7 @@
         fieldLabel: 'Search Products',
         hideLabel: false,
         hideTrigger: true,
-        typeAhead: true,
+        typeAhead: false,
         store: store,
         queryMode: 'local',
         displayField: 'name',

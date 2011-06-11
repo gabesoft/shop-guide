@@ -16,7 +16,7 @@ Ext.define 'SG.search.ComboBox'
       fieldLabel: 'Search Products'
       hideLabel: false
       hideTrigger: true
-      typeAhead: true
+      typeAhead: false 
       store: store
       queryMode: 'local'
       displayField: 'name'

@@ -1,11 +1,24 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.where(search_options).sort(:name).all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @products }
       format.json  { render :json => @product.to_json }
+    end
+  end
+
+  def names
+    #names = Product.where(search_options).sort(:name).to_json(:only => :name)
+    names = Product.
+      where(search_options).
+      sort(:name).
+      fields(:name).all.
+      map { |p| p.name }
+    respond_to do |format|
+      format.json { render :json => names }
+      format.all { render :text => "only JSON format is supported" }
     end
   end
 
@@ -104,4 +117,17 @@ class ProductsController < ApplicationController
   def paramsTags
     params[:product][:tags].nil? ? [] : params[:product][:tags].split(/, */)
   end
+
+  private
+
+  def search_options
+    options = {}
+
+    # TODO: add search by tags also (with priority)
+    if params[:name]
+      options[:name] = /#{Regexp.quote params[:name]}/
+    end
+
+    options
+  end  
 end

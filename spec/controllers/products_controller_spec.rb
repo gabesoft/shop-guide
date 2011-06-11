@@ -9,11 +9,22 @@ describe ProductsController do
     { :name => 'prod x', :tags => "a b,c d e, f,g,h, k"}
   end
 
-  def create_products count
+  def products_range count
     ( 1 .. count ).
       to_a.
       map { |n| Product.create! :name => "p#{n}", 
                                 :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
+  end
+
+  def create_products
+    values = [
+      { :name => 'blue diamond',  :tags => ['jewelery'] },
+      { :name => 'cornflakes',    :tags => ['breakfast', 'food'] },
+      { :name => 'milk',          :tags => ['dairy', 'food'] },
+      { :name => 'shaving cream', :tags => ['beauty', 'health'] },
+      { :name => 'shampoo',       :tags => ['beauty', 'health'] },
+    ]
+    values.each { |v| Product.create! v }
   end
 
   describe "GET index" do
@@ -21,6 +32,23 @@ describe ProductsController do
       product = Product.create! valid_attributes
       get :index
       assigns(:products).should eq([product])
+    end
+
+    it "should filter products by name" do
+        create_products
+        get :index, :name => 'sh'
+        products = assigns :products
+        products.count.should eq 2
+        products[0][:name].should eq 'shampoo'
+        products[1][:name].should eq 'shaving cream'
+    end
+  end
+  
+  describe "GET names" do
+    it "should get only filtered names" do
+      create_products
+      get :names, :name => 'sh', :format => :json
+      JSON.parse(response.body).should eq [ 'shampoo', 'shaving cream' ]
     end
   end
 
@@ -93,12 +121,10 @@ describe ProductsController do
     describe "with valid params" do
       it "updates the requested product" do
         product = Product.create! valid_attributes
-        # Assuming there are no other products in the database, this
-        # specifies that the Product created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Product.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => product.slug, :product => {'these' => 'params'}
+        Product.any_instance.
+          should_receive(:update_attributes).
+          with({:name => 'milk', :tags => ['dairy', 'food']})
+        put :update, :id => product.slug, :product => {:name => 'milk', :tags => 'dairy, food'}
       end
 
       it "assigns the requested product as @product" do
@@ -117,7 +143,6 @@ describe ProductsController do
     describe "with invalid params" do
       it "assigns the product as @product" do
         product = Product.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
         Product.any_instance.stub(:save).and_return(false)
         put :update, :id => product.slug, :product => {}
         assigns(:product).should eq(product)
@@ -125,7 +150,6 @@ describe ProductsController do
 
       it "re-renders the 'edit' template" do
         product = Product.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
         Product.any_instance.stub(:save).and_return(false)
         put :update, :id => product.slug, :product => {}
         response.should render_template("edit")
@@ -150,7 +174,7 @@ describe ProductsController do
 
   describe "POST destroy_all" do
     it "should destroy all products" do
-      create_products 10
+      products_range 10
       post :destroy_all 
       Product.all.count.should eq 0
     end
@@ -166,7 +190,7 @@ describe ProductsController do
 
   describe "POST export" do
     it "should return all products in json format" do
-      create_products 10
+      products_range 10
       post :export, :format => :json
       body = JSON.parse response.body
       body.count.should eq 10
