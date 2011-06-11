@@ -10,7 +10,7 @@ ShopGuide::Application.routes.draw do
     post :clear, :action => :destroy_all, :on => :collection
     post :import, :action => :import, :on => :collection
     post :export, :action => :export, :on => :collection
-    get :names, :action => :names, :on => :collection
+    get :hint, :action => :hint, :on => :collection
   end
 
   #post "products/clear", :to => "products#destroy_all"

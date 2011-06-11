@@ -12,7 +12,7 @@ describe ProductsController do
   def products_range count
     ( 1 .. count ).
       to_a.
-      map { |n| Product.create! :name => "p#{n}", 
+      map { |n| Product.create! :name => "product#{n}", 
                                 :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
   end
 
@@ -36,7 +36,7 @@ describe ProductsController do
 
     it "should filter products by name" do
         create_products
-        get :index, :name => 'sh'
+        get :index, :query => 'sh'
         products = assigns :products
         products.count.should eq 2
         products[0][:name].should eq 'shampoo'
@@ -44,11 +44,19 @@ describe ProductsController do
     end
   end
   
-  describe "GET names" do
+  describe "GET hint" do
     it "should get only filtered names" do
       create_products
-      get :names, :name => 'sh', :format => :json
-      JSON.parse(response.body).should eq [ 'shampoo', 'shaving cream' ]
+      get :hint, :query => 'sh', :format => :json
+      items = JSON.parse(response.body)
+      hints = items.map { |p| p[:name.to_s] }
+      hints.should eq [ 'shampoo', 'shaving cream' ]
+    end
+
+    it "should get only the first ten matching names" do
+      products_range 20
+      get :hint, :name => 'prod', :format => :json
+      JSON.parse(response.body).count.should eq 10
     end
   end
 

@@ -9,13 +9,13 @@ class ProductsController < ApplicationController
     end
   end
 
-  def names
+  def hint
     #names = Product.where(search_options).sort(:name).to_json(:only => :name)
     names = Product.
       where(search_options).
       sort(:name).
-      fields(:name).all.
-      map { |p| p.name }
+      fields(:name).
+      limit(10).all
     respond_to do |format|
       format.json { render :json => names }
       format.all { render :text => "only JSON format is supported" }
@@ -124,8 +124,8 @@ class ProductsController < ApplicationController
     options = {}
 
     # TODO: add search by tags also (with priority)
-    if params[:name]
-      options[:name] = /#{Regexp.quote params[:name]}/
+    if params[:query]
+      options[:name] = /#{Regexp.quote params[:query]}/i
     end
 
     options

@@ -1,26 +1,35 @@
-/* DO NOT MODIFY. This file was compiled Sat, 11 Jun 2011 04:15:30 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 11 Jun 2011 17:09:43 GMT from
  * /apps/shop_guide/app/coffeescripts/app/search/ComboBox.coffee
  */
 
 (function() {
+  Ext.define('SG.search.Hint', {
+    extend: 'Ext.data.Model',
+    fields: [
+      {
+        name: 'id',
+        type: 'string'
+      }, {
+        name: 'name',
+        type: 'string'
+      }
+    ],
+    proxy: {
+      type: 'rest',
+      method: 'GET',
+      url: hint_products_path(),
+      reader: {
+        type: 'json'
+      }
+    }
+  });
   Ext.define('SG.search.ComboBox', {
     extend: 'Ext.form.ComboBox',
     alias: 'widget.sg-search-combo',
     initComponent: function() {
       var store;
       store = Ext.create('Ext.data.Store', {
-        fields: ['name'],
-        data: [
-          {
-            name: 'milk'
-          }, {
-            name: 'coffee'
-          }, {
-            name: 'shaving cream'
-          }, {
-            name: 'shampoo'
-          }
-        ]
+        model: 'SG.search.Hint'
       });
       Ext.apply(this, {
         fieldLabel: 'Search Products',
@@ -28,7 +37,7 @@
         hideTrigger: true,
         typeAhead: false,
         store: store,
-        queryMode: 'local',
+        queryMode: 'remote',
         displayField: 'name',
         valueField: 'name',
         width: 200,
