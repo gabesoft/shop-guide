@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 01:48:23 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 05:37:00 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -24,9 +24,25 @@
         bodyPadding: 10,
         items: [
           {
-            xtype: 'sg-search-combo'
+            xtype: 'search-box'
           }, {
-            xtype: 'sg-search-grid'
+            xtype: 'panel',
+            layout: {
+              type: 'hbox'
+            },
+            border: false,
+            padding: 0,
+            items: [
+              {
+                xtype: 'category-list',
+                flex: 1,
+                style: 'margin: 0 10px 0 0',
+                border: false
+              }, {
+                xtype: 'search-results-grid',
+                flex: 3
+              }
+            ]
           }
         ]
       });

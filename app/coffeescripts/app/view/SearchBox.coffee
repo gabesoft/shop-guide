@@ -1,6 +1,6 @@
-Ext.define 'SG.view.search.ComboBox'
+Ext.define 'SG.view.SearchBox'
   extend: 'Ext.form.ComboBox'
-  alias: 'widget.sg-search-combo'
+  alias: 'widget.search-box'
   initComponent: () ->
     store = Ext.create('Ext.data.Store', model: 'SG.model.Hint')
 
@@ -8,7 +8,7 @@ Ext.define 'SG.view.search.ComboBox'
       fieldLabel: 'Search Products'
       hideLabel: false
       hideTrigger: true
-      typeAhead: false 
+      typeAhead: false
       store: store
       queryMode: 'remote'
       displayField: 'name'

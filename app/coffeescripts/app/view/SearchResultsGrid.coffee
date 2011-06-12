@@ -1,6 +1,6 @@
-Ext.define 'SG.view.search.GridPanel'
+Ext.define 'SG.view.SearchResultsGrid'
   extend: 'Ext.grid.Panel'
-  alias: 'widget.sg-search-grid'
+  alias: 'widget.search-results-grid'
   initComponent: () ->
     selModel = Ext.create('Ext.selection.CheckboxModel'
       injectCheckbox: 0

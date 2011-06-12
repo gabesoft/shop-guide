@@ -24,8 +24,24 @@ Ext.application(
         padding: 5
       bodyPadding: 10
       items: [
-        { xtype: 'sg-search-combo' }
-        { xtype: 'sg-search-grid' }
+        { xtype: 'search-box' }
+        {
+          xtype: 'panel'
+          layout: 
+            type: 'hbox'
+            #align: 'stretch'
+          border: false
+          padding: 0
+          items: [
+            { 
+              xtype: 'category-list' 
+              flex: 1 
+              style: 'margin: 0 10px 0 0' 
+              border: false
+            }
+            { xtype: 'search-results-grid', flex: 3 }
+          ]
+        }
       ]
     )
 )

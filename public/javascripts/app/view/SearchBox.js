@@ -1,11 +1,11 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 01:48:23 GMT from
- * /apps/shop_guide/app/coffeescripts/app/view/search/ComboBox.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 04:41:47 GMT from
+ * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
 (function() {
-  Ext.define('SG.view.search.ComboBox', {
+  Ext.define('SG.view.SearchBox', {
     extend: 'Ext.form.ComboBox',
-    alias: 'widget.sg-search-combo',
+    alias: 'widget.search-box',
     initComponent: function() {
       var store;
       store = Ext.create('Ext.data.Store', {

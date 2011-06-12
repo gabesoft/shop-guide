@@ -1,11 +1,11 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 01:48:23 GMT from
- * /apps/shop_guide/app/coffeescripts/app/view/search/GridPanel.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 04:41:47 GMT from
+ * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
 (function() {
-  Ext.define('SG.view.search.GridPanel', {
+  Ext.define('SG.view.SearchResultsGrid', {
     extend: 'Ext.grid.Panel',
-    alias: 'widget.sg-search-grid',
+    alias: 'widget.search-results-grid',
     initComponent: function() {
       var selModel, store;
       selModel = Ext.create('Ext.selection.CheckboxModel', {
