@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 04:41:47 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 17:21:52 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -16,12 +16,11 @@
         hideLabel: false,
         hideTrigger: true,
         typeAhead: false,
+        minChars: 3,
         store: store,
         queryMode: 'remote',
         displayField: 'name',
         valueField: 'name',
-        width: 200,
-        style: 'margin-top:20px',
         listConfig: {
           loadingText: 'Searching...',
           emptyText: 'No matching products found'

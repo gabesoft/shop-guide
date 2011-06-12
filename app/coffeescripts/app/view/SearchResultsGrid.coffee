@@ -21,6 +21,9 @@ Ext.define 'SG.view.SearchResultsGrid'
       columns: [
         { text: 'Product', dataIndex: 'name' }
       ]
+      bbar: [
+        { xtype: 'button', text: 'Add to shopping list' }
+      ]
       columnLines: true
       frame: true
       title: 'Search Results'

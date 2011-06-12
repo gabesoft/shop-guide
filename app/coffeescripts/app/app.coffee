@@ -18,29 +18,42 @@ Ext.application(
   launch: () ->
     Ext.create('Ext.container.Viewport',
       xtype: 'panel'
-      layout:
-        type: 'vbox'
-        align: 'stretch'
-        padding: 5
-      bodyPadding: 10
+      id: 'container-panel'
+      style: 'background: #fff'
+      layout: 'border'
       items: [
-        { xtype: 'search-box' }
         {
-          xtype: 'panel'
-          layout: 
-            type: 'hbox'
-            #align: 'stretch'
+          region: 'north'
+          xtype: 'search-box'
           border: false
-          padding: 0
-          items: [
-            { 
-              xtype: 'category-list' 
-              flex: 1 
-              style: 'margin: 0 10px 0 0' 
-              border: false
-            }
-            { xtype: 'search-results-grid', flex: 3 }
-          ]
+          split: true
+          margins: '40 450 50 5'
+        }
+        {
+          region: 'west'
+          border: false
+          xtype: 'category-list'
+          margins: '5 5 5 5'
+          flex: 1
+        }
+        {
+          region: 'center'
+          xtype: 'search-results-grid'
+          margins: '5 5 250 5'
+          flex: 3
+        }
+        {
+          region: 'east'
+          xtype: 'shopping-list'
+          border: false
+          html: 'shopping list'
+          margins: '5 5 5 5'
+          flex: 1
+        }
+        {
+          region: 'south'
+          xtype: 'panel'
+          html: 'footer'
         }
       ]
     )

@@ -9,12 +9,11 @@ Ext.define 'SG.view.SearchBox'
       hideLabel: false
       hideTrigger: true
       typeAhead: false
+      minChars: 3
       store: store
       queryMode: 'remote'
       displayField: 'name'
       valueField: 'name'
-      width: 200
-      style: 'margin-top:20px'
       listConfig:
         loadingText: 'Searching...'
         emptyText: 'No matching products found'

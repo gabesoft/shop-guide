@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 04:41:47 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 17:42:20 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -32,6 +32,12 @@
           {
             text: 'Product',
             dataIndex: 'name'
+          }
+        ],
+        bbar: [
+          {
+            xtype: 'button',
+            text: 'Add to shopping list'
           }
         ],
         columnLines: true,
