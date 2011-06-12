@@ -8,7 +8,8 @@
     -#= stylesheet_link_tag "application"
     = stylesheet_link_extjs
     = javascript_include_extjs
-    = javascript_include_tag :defaults, 'app', 'routes', 'app/search/ComboBox', 'app/search/GridPanel'
+    = javascript_include_app
+    -#= javascript_include_tag :defaults, 'app', 'routes', 'app/search/ComboBox', 'app/search/GridPanel'
     = csrf_meta_tag
     = yield(:head)
 

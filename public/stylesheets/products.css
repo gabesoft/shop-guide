@@ -50,3 +50,8 @@ div.bulk label {
   clear: left;
   margin-right: 10px;
 }
+
+a:link    { color: #F60; }
+a:visited { color: #900; }
+a:hover   { color: #F33; }
+a:active  { color: #B2F511; }

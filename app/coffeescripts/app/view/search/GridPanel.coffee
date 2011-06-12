@@ -1,4 +1,4 @@
-Ext.define 'SG.search.GridPanel'
+Ext.define 'SG.view.search.GridPanel'
   extend: 'Ext.grid.Panel'
   alias: 'widget.sg-search-grid'
   initComponent: () ->

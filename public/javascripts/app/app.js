@@ -1,5 +1,5 @@
-/* DO NOT MODIFY. This file was compiled Fri, 10 Jun 2011 22:44:26 GMT from
- * /apps/shop_guide/app/coffeescripts/app.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 01:48:23 GMT from
+ * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
 (function() {
@@ -14,8 +14,6 @@
   Ext.application({
     name: 'Shop Guide',
     launch: function() {
-      var searchCombo;
-      searchCombo = Ext.create('SG.search.ComboBox');
       return Ext.create('Ext.container.Viewport', {
         xtype: 'panel',
         layout: {

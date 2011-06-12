@@ -1,35 +1,15 @@
-/* DO NOT MODIFY. This file was compiled Sat, 11 Jun 2011 17:09:43 GMT from
- * /apps/shop_guide/app/coffeescripts/app/search/ComboBox.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 01:48:23 GMT from
+ * /apps/shop_guide/app/coffeescripts/app/view/search/ComboBox.coffee
  */
 
 (function() {
-  Ext.define('SG.search.Hint', {
-    extend: 'Ext.data.Model',
-    fields: [
-      {
-        name: 'id',
-        type: 'string'
-      }, {
-        name: 'name',
-        type: 'string'
-      }
-    ],
-    proxy: {
-      type: 'rest',
-      method: 'GET',
-      url: hint_products_path(),
-      reader: {
-        type: 'json'
-      }
-    }
-  });
-  Ext.define('SG.search.ComboBox', {
+  Ext.define('SG.view.search.ComboBox', {
     extend: 'Ext.form.ComboBox',
     alias: 'widget.sg-search-combo',
     initComponent: function() {
       var store;
       store = Ext.create('Ext.data.Store', {
-        model: 'SG.search.Hint'
+        model: 'SG.model.Hint'
       });
       Ext.apply(this, {
         fieldLabel: 'Search Products',

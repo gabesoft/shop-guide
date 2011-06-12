@@ -11,3 +11,12 @@ module ApplicationHelper
     end
   end
 end
+
+def javascript_include_app
+  base = 'public/javascripts/'
+  files = *Dir[base + 'app/**/*.js']
+  files.each { |s| s[base] = '' }
+  files.delete 'app/sample.js'
+  files.insert 0, 'routes'
+  javascript_include_tag files
+end

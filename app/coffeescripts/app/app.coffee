@@ -3,7 +3,6 @@ Ext.Loader.setConfig (enabled: true)
 Ext.Loader.setPath(
   AppName: 'app'
   Ext: '/javascripts/lib/extjs/src'
-  #Ext: '/javascripts/lib/extjs'
 )
 
 Ext.require([
@@ -17,8 +16,6 @@ Ext.require([
 Ext.application(
   name: 'Shop Guide'
   launch: () ->
-    searchCombo = Ext.create('SG.search.ComboBox')
-
     Ext.create('Ext.container.Viewport',
       xtype: 'panel'
       layout:
