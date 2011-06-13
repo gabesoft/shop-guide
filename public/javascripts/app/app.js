@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 23:40:41 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 03:56:52 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -14,7 +14,7 @@
   Ext.application({
     name: 'Shop Guide',
     launch: function() {
-      var combo, grid, viewport;
+      var combo, grid, shoppingList, viewport;
       viewport = Ext.create('Ext.container.Viewport', {
         xtype: 'panel',
         id: 'container-panel',
@@ -54,8 +54,12 @@
       });
       combo = viewport.child('search-box[region=north]');
       grid = viewport.child('search-results-grid[region=center]');
-      return combo.on('search', function(query) {
+      shoppingList = viewport.child('shopping-list[region=east]');
+      combo.on('search', function(query) {
         return grid.loadProducts(query);
+      });
+      return grid.on('add-products', function(records) {
+        return shoppingList.addProducts(records);
       });
     }
   });

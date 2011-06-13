@@ -31,9 +31,8 @@ Ext.define 'SG.view.SearchBox'
     @addEvents('search': true)
 
     query = ''
-    onSpecialKey = (field, e) ->
-      if e.getKey() == e.ENTER and @getValue() != query
+    @on('specialKey', (field, e) =>
+      if e.getKey() is e.ENTER and @getValue() isnt query
         query = @getValue()
         @fireEvent('search', query)
-
-    @on('specialKey', onSpecialKey, this)
+    )

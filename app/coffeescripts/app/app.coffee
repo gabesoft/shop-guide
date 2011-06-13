@@ -61,6 +61,8 @@ Ext.application(
 
     combo = viewport.child('search-box[region=north]')
     grid = viewport.child('search-results-grid[region=center]')
+    shoppingList = viewport.child('shopping-list[region=east]')
+    
     combo.on('search', (query) -> grid.loadProducts(query))
-
+    grid.on('add-products', (records) -> shoppingList.addProducts(records))
 )

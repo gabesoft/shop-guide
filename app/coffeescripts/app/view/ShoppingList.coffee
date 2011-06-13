@@ -2,18 +2,7 @@ Ext.define 'SG.view.ShoppingList'
   extend: 'Ext.grid.Panel'
   alias: 'widget.shopping-list'
   initComponent: () ->
-    store = Ext.create('Ext.data.Store',
-      fields: ['name']
-      data: [
-        { name: 'milk' }
-        { name: 'eggs' }
-        { name: 'wine' }
-        { name: 'shampoo' }
-        { name: 'vodka' }
-        { name: 'shaving cream' }
-        { name: 'paper napkins' }
-      ]
-    )
+    store = Ext.create('Ext.data.Store', model: 'SG.model.Product')
     
     Ext.apply(this,
       store: store
@@ -34,3 +23,8 @@ Ext.define 'SG.view.ShoppingList'
     )
 
     @callParent()
+
+  addProducts: (records) ->
+    existing = (r.data.id for r in @store.getRange())
+    selected = (r for r in records when r.id not in existing)
+    @store.loadData(selected, true)
