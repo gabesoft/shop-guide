@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 03:48:55 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 04:18:15 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 

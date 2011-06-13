@@ -41,15 +41,15 @@ Ext.application(
           region: 'center'
           xtype: 'search-results-grid'
           margins: '5 5 250 5'
-          flex: 3
+          flex: 4
         }
         {
           region: 'east'
           xtype: 'shopping-list'
-          border: false
+          #border: false
           html: 'shopping list'
-          margins: '5 5 5 5'
-          flex: 1
+          margins: '5 5 250 5'
+          flex: 2
         }
         {
           region: 'south'

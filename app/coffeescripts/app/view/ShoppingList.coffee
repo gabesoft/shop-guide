@@ -20,9 +20,15 @@ Ext.define 'SG.view.ShoppingList'
           flex: 1
         }
       ]
+      bbar: [
+        { xtype: 'button', text: 'Remove All', ref: 'clear-button' }
+      ]
     )
 
     @callParent()
+
+    [clearButton] = @query 'button[ref=clear-button]'
+    clearButton.on('click', () => @store.removeAll())
 
   addProducts: (records) ->
     existing = (r.data.id for r in @store.getRange())

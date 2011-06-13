@@ -1,9 +1,9 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 04:05:59 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 04:20:31 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/ShoppingList.coffee
  */
 
 (function() {
-  var __indexOf = Array.prototype.indexOf || function(item) {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; }, __indexOf = Array.prototype.indexOf || function(item) {
     for (var i = 0, l = this.length; i < l; i++) {
       if (this[i] === item) return i;
     }
@@ -13,7 +13,7 @@
     extend: 'Ext.grid.Panel',
     alias: 'widget.shopping-list',
     initComponent: function() {
-      var store;
+      var clearButton, store;
       store = Ext.create('Ext.data.Store', {
         model: 'SG.model.Product'
       });
@@ -33,9 +33,20 @@
             dataIndex: 'name',
             flex: 1
           }
+        ],
+        bbar: [
+          {
+            xtype: 'button',
+            text: 'Remove All',
+            ref: 'clear-button'
+          }
         ]
       });
-      return this.callParent();
+      this.callParent();
+      clearButton = this.query('button[ref=clear-button]')[0];
+      return clearButton.on('click', __bind(function() {
+        return this.store.removeAll();
+      }, this));
     },
     addProducts: function(records) {
       var existing, r, selected;
@@ -60,8 +71,6 @@
         }
         return _results;
       })();
-      console.log('existing', existing);
-      console.log('selected', selected);
       return this.store.loadData(selected, true);
     }
   });

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 03:56:52 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 04:22:10 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -37,14 +37,13 @@
             region: 'center',
             xtype: 'search-results-grid',
             margins: '5 5 250 5',
-            flex: 3
+            flex: 4
           }, {
             region: 'east',
             xtype: 'shopping-list',
-            border: false,
             html: 'shopping list',
-            margins: '5 5 5 5',
-            flex: 1
+            margins: '5 5 250 5',
+            flex: 2
           }, {
             region: 'south',
             xtype: 'panel',
