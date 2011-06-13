@@ -5,12 +5,11 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @products }
-      format.json  { render :json => @product.to_json }
+      format.json  { render :json => @products.to_json }
     end
   end
 
   def hint
-    #names = Product.where(search_options).sort(:name).to_json(:only => :name)
     names = Product.
       where(search_options).
       sort(:name).

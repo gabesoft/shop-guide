@@ -9,6 +9,7 @@ Ext.require([
   'Ext.Component',
   'Ext.container.Viewport',
   'Ext.selection.CheckboxModel',
+  'Ext.layout.container.Border',
   'Ext.grid.*',
   'Ext.data.*'
 ])
@@ -16,7 +17,7 @@ Ext.require([
 Ext.application(
   name: 'Shop Guide'
   launch: () ->
-    Ext.create('Ext.container.Viewport',
+    viewport = Ext.create('Ext.container.Viewport',
       xtype: 'panel'
       id: 'container-panel'
       style: 'background: #fff'
@@ -57,4 +58,9 @@ Ext.application(
         }
       ]
     )
+
+    combo = viewport.child('search-box[region=north]')
+    grid = viewport.child('search-results-grid[region=center]')
+    combo.on('search', (query) -> grid.loadProducts(query))
+
 )

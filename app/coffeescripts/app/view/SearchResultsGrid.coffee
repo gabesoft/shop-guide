@@ -5,21 +5,14 @@ Ext.define 'SG.view.SearchResultsGrid'
     selModel = Ext.create('Ext.selection.CheckboxModel'
       injectCheckbox: 0
     )
-    store = Ext.create('Ext.data.Store',
-      fields: ['name']
-      data: [
-        { name: 'milk' }
-        { name: 'coffee' }
-        { name: 'shaving cream' }
-        { name: 'shampoo' }
-      ]
-    )
+    store = Ext.create('Ext.data.Store', model: 'SG.model.Product')
 
     Ext.apply(this,
       store: store
       selModel: selModel
       columns: [
-        { text: 'Product', dataIndex: 'name' }
+        { text: 'Product', dataIndex: 'name', flex: 1 }
+        { text: 'Tags', dataIndex: 'tags' }
       ]
       bbar: [
         { xtype: 'button', text: 'Add to shopping list' }
@@ -31,3 +24,13 @@ Ext.define 'SG.view.SearchResultsGrid'
     )
 
     @callParent()
+  
+  loadProducts: (query) ->
+    console.log('loading...', query)
+    @store.load(
+      scope: this
+      params:
+        query: query
+      callback: (records, op, success) ->
+          console.log(success)
+    )

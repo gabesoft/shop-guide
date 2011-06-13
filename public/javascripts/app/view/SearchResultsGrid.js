@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 17:42:20 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:05:51 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -12,18 +12,7 @@
         injectCheckbox: 0
       });
       store = Ext.create('Ext.data.Store', {
-        fields: ['name'],
-        data: [
-          {
-            name: 'milk'
-          }, {
-            name: 'coffee'
-          }, {
-            name: 'shaving cream'
-          }, {
-            name: 'shampoo'
-          }
-        ]
+        model: 'SG.model.Product'
       });
       Ext.apply(this, {
         store: store,
@@ -31,7 +20,11 @@
         columns: [
           {
             text: 'Product',
-            dataIndex: 'name'
+            dataIndex: 'name',
+            flex: 1
+          }, {
+            text: 'Tags',
+            dataIndex: 'tags'
           }
         ],
         bbar: [
@@ -46,6 +39,18 @@
         iconCls: 'icon-grid'
       });
       return this.callParent();
+    },
+    loadProducts: function(query) {
+      console.log('loading...', query);
+      return this.store.load({
+        scope: this,
+        params: {
+          query: query
+        },
+        callback: function(records, op, success) {
+          return console.log(success);
+        }
+      });
     }
   });
 }).call(this);
