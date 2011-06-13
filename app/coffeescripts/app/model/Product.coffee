@@ -5,9 +5,3 @@ Ext.define 'SG.model.Product'
     { name: 'name', type: 'string' }
     { name: 'tags', type: 'array' }
   ]
-  proxy:
-    type: 'rest'
-    method: 'GET'
-    url: products_path() + '.json'
-    reader:
-      type: 'json'

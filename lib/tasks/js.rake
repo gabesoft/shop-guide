@@ -22,7 +22,7 @@ end
 def generate_method(name, path)
   compare = /:(.*?)(\/|$)/
   path.sub!(compare, "' + params.#{$1} + '#{$2}") while path =~ compare
-  return "function #{name}(params){ return '#{path}'}"
+  return "function #{name}(params){ return '#{path}' + (params && params.format ? '.' + params.format : ''); }"
 end
 
 def generate_routes_for_rails_2

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 23:57:48 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:13:07 GMT from
  * /apps/shop_guide/app/coffeescripts/app/model/Product.coffee
  */
 
@@ -16,14 +16,6 @@
         name: 'tags',
         type: 'array'
       }
-    ],
-    proxy: {
-      type: 'rest',
-      method: 'GET',
-      url: products_path() + '.json',
-      reader: {
-        type: 'json'
-      }
-    }
+    ]
   });
 }).call(this);

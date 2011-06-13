@@ -5,7 +5,15 @@ Ext.define 'SG.view.SearchResultsGrid'
     selModel = Ext.create('Ext.selection.CheckboxModel'
       injectCheckbox: 0
     )
-    store = Ext.create('Ext.data.Store', model: 'SG.model.Product')
+    store = Ext.create('Ext.data.Store',
+      model: 'SG.model.Product'
+      proxy:
+        type: 'ajax'
+        method: 'GET'
+        url: products_path(format: 'json')
+        reader:
+          type: 'json'
+    )
 
     Ext.apply(this,
       store: store

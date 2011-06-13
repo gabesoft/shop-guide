@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 23:06:01 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:34:22 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -10,7 +10,17 @@
     initComponent: function() {
       var onSpecialKey, query, store;
       store = Ext.create('Ext.data.Store', {
-        model: 'SG.model.Hint'
+        model: 'SG.model.Hint',
+        proxy: {
+          type: 'ajax',
+          method: 'GET',
+          url: hint_products_path({
+            format: 'json'
+          }),
+          reader: {
+            type: 'json'
+          }
+        }
       });
       Ext.apply(this, {
         hideLabel: false,

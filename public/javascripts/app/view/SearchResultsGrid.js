@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:05:51 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:34:22 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -12,7 +12,17 @@
         injectCheckbox: 0
       });
       store = Ext.create('Ext.data.Store', {
-        model: 'SG.model.Product'
+        model: 'SG.model.Product',
+        proxy: {
+          type: 'ajax',
+          method: 'GET',
+          url: products_path({
+            format: 'json'
+          }),
+          reader: {
+            type: 'json'
+          }
+        }
       });
       Ext.apply(this, {
         store: store,

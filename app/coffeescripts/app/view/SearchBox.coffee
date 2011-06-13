@@ -3,7 +3,15 @@ Ext.define 'SG.view.SearchBox'
   alias: 'widget.search-box'
   fieldLabel: 'Search Products'
   initComponent: () ->
-    store = Ext.create('Ext.data.Store', model: 'SG.model.Hint')
+    store = Ext.create('Ext.data.Store',
+      model: 'SG.model.Hint'
+      proxy:
+        type: 'ajax'
+        method: 'GET'
+        url: hint_products_path(format: 'json')
+        reader:
+          type: 'json'
+    )
 
     Ext.apply(this,
       hideLabel: false

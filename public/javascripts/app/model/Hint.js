@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 02:32:17 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:15:15 GMT from
  * /apps/shop_guide/app/coffeescripts/app/model/Hint.coffee
  */
 
@@ -13,14 +13,6 @@
         name: 'name',
         type: 'string'
       }
-    ],
-    proxy: {
-      type: 'rest',
-      method: 'GET',
-      url: hint_products_path(),
-      reader: {
-        type: 'json'
-      }
-    }
+    ]
   });
 }).call(this);
