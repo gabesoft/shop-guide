@@ -1,1239 +1,1394 @@
 [
    {
-      "name" : "100% juice",
       "slug" : "100-juice",
+      "name" : "100% juice",
+      "category" : "food:other",
       "id" : "4df19e11f01f36000100000d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "A Taste of Thai Lite Coconut Milk",
       "slug" : "a-taste-of-thai-lite-coconut-milk",
+      "name" : "A Taste of Thai Lite Coconut Milk",
+      "category" : "food:other",
       "id" : "4df19e11f01f36000100000f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "A Taste of Thai Rice Noodles, Straight Cut",
       "slug" : "a-taste-of-thai-rice-noodles-straight-cut",
+      "name" : "A Taste of Thai Rice Noodles, Straight Cut",
+      "category" : "food:other",
       "id" : "4df19e11f01f360001000011",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Alouette Goat Cheese, Crumbled",
       "slug" : "alouette-goat-cheese-crumbled",
+      "name" : "Alouette Goat Cheese, Crumbled",
+      "category" : "food:other",
       "id" : "4df19e11f01f360001000013",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Amy&#039;s Asian Noodle, Stir Fry",
       "slug" : "amy-039-s-asian-noodle-stir-fry",
+      "name" : "Amy&#039;s Asian Noodle, Stir Fry",
+      "category" : "food:other",
       "id" : "4df19e11f01f360001000015",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Amy&#039;s Enchilada, Black Bean Vegetable",
       "slug" : "amy-039-s-enchilada-black-bean-vegetable",
+      "name" : "Amy&#039;s Enchilada, Black Bean Vegetable",
+      "category" : "food:other",
       "id" : "4df19e11f01f360001000017",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Amy&#039;s Tamale Verde, Black Bean",
       "slug" : "amy-039-s-tamale-verde-black-bean",
+      "name" : "Amy&#039;s Tamale Verde, Black Bean",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000019",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ancient Harvest Quinoa, Inca Red",
       "slug" : "ancient-harvest-quinoa-inca-red",
+      "name" : "Ancient Harvest Quinoa, Inca Red",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100001b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ancient Harvest Quinoa, Traditional",
       "slug" : "ancient-harvest-quinoa-traditional",
+      "name" : "Ancient Harvest Quinoa, Traditional",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100001d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Applegate Farms Turkey Breast, Roasted",
       "slug" : "applegate-farms-turkey-breast-roasted",
+      "name" : "Applegate Farms Turkey Breast, Roasted",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100001f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Argo Corn Starch, 100% Pure",
       "slug" : "argo-corn-starch-100-pure",
+      "name" : "Argo Corn Starch, 100% Pure",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000021",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Beans and lentils",
       "slug" : "beans-and-lentils",
+      "name" : "Beans and lentils",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000023",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Buddig Corned Beef",
       "slug" : "buddig-corned-beef",
+      "name" : "Buddig Corned Beef",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000043",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Corn and rice",
       "slug" : "corn-and-rice",
+      "name" : "Corn and rice",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000055",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Eggs",
       "slug" : "eggs",
+      "name" : "Eggs",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000063",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Betty Crocker Frosting, Creamy White",
       "slug" : "betty-crocker-frosting-creamy-white",
+      "name" : "Betty Crocker Frosting, Creamy White",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000025",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Betty Crocker Mashed Potatoes",
       "slug" : "betty-crocker-mashed-potatoes",
+      "name" : "Betty Crocker Mashed Potatoes",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000027",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Blue Diamond almonds",
       "slug" : "blue-diamond-almonds",
+      "name" : "Blue Diamond almonds",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000029",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Blue Diamond Cracker Snacks",
       "slug" : "blue-diamond-cracker-snacks",
+      "name" : "Blue Diamond Cracker Snacks",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100002b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Blue Diamond Non-Dairy Beverage",
       "slug" : "blue-diamond-non-dairy-beverage",
+      "name" : "Blue Diamond Non-Dairy Beverage",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100002d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Blue Diamond nuts and rice",
       "slug" : "blue-diamond-nuts-and-rice",
+      "name" : "Blue Diamond nuts and rice",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100002f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bob&#039;s Red Mill Bread Mix, Hearty",
       "slug" : "bob-039-s-red-mill-bread-mix-hearty",
+      "name" : "Bob&#039;s Red Mill Bread Mix, Hearty",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000031",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bob&#039;s Red Mill Flaxseed Meal, Whole Ground",
       "slug" : "bob-039-s-red-mill-flaxseed-meal-whole-ground",
+      "name" : "Bob&#039;s Red Mill Flaxseed Meal, Whole Ground",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000033",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Fruit Smoothie",
       "slug" : "bolthouse-farms-fruit-smoothie",
+      "name" : "Bolthouse Farms Fruit Smoothie",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000035",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Fruit Smoothie, Berry Boost",
       "slug" : "bolthouse-farms-fruit-smoothie-berry-boost",
+      "name" : "Bolthouse Farms Fruit Smoothie, Berry Boost",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000037",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Fruit Smoothie, C-Boost",
       "slug" : "bolthouse-farms-fruit-smoothie-c-boost",
+      "name" : "Bolthouse Farms Fruit Smoothie, C-Boost",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000039",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Juice, 100% Carrot",
       "slug" : "bolthouse-farms-juice-100-carrot",
+      "name" : "Bolthouse Farms Juice, 100% Carrot",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100003b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Vinaigrette, Extra Virgin",
       "slug" : "bolthouse-farms-vinaigrette-extra-virgin",
+      "name" : "Bolthouse Farms Vinaigrette, Extra Virgin",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100003d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Bolthouse Farms Yogurt Dressing",
       "slug" : "bolthouse-farms-yogurt-dressing",
+      "name" : "Bolthouse Farms Yogurt Dressing",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100003f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Brown, white, wild and sweet rice",
       "slug" : "brown-white-wild-and-sweet-rice",
+      "name" : "Brown, white, wild and sweet rice",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000041",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Celestial Seasonings Fruit Tea Sampler",
       "slug" : "celestial-seasonings-fruit-tea-sampler",
+      "name" : "Celestial Seasonings Fruit Tea Sampler",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000045",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Celestial Seasonings Herbal Tea",
       "slug" : "celestial-seasonings-herbal-tea",
+      "name" : "Celestial Seasonings Herbal Tea",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000047",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Cheddar Cheese, aged hard",
       "slug" : "cheddar-cheese-aged-hard",
+      "name" : "Cheddar Cheese, aged hard",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000049",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Chef&#039;s Requested Beef Filet, Angus",
       "slug" : "chef-039-s-requested-beef-filet-angus",
+      "name" : "Chef&#039;s Requested Beef Filet, Angus",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100004b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Cherry Juice Infused",
       "slug" : "cherry-juice-infused",
+      "name" : "Cherry Juice Infused",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100004d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Cinnamon Chex Cereal",
       "slug" : "cinnamon-chex-cereal",
+      "name" : "Cinnamon Chex Cereal",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100004f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Classico Pasta Sauce",
       "slug" : "classico-pasta-sauce",
+      "name" : "Classico Pasta Sauce",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000051",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Coffee-Mate Coffee Creamer, Sugar Free",
       "slug" : "coffee-mate-coffee-creamer-sugar-free",
+      "name" : "Coffee-Mate Coffee Creamer, Sugar Free",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000053",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Corn Chex Cereal",
       "slug" : "corn-chex-cereal",
+      "name" : "Corn Chex Cereal",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000057",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Corn meal",
       "slug" : "corn-meal",
+      "name" : "Corn meal",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000059",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Dei Fratelli Tomato Sauce",
       "slug" : "dei-fratelli-tomato-sauce",
+      "name" : "Dei Fratelli Tomato Sauce",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100005b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Del Monte Fruit Smoothie, Ready-to-Blend",
       "slug" : "del-monte-fruit-smoothie-ready-to-blend",
+      "name" : "Del Monte Fruit Smoothie, Ready-to-Blend",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100005d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Dinty Moore Beef Stew",
       "slug" : "dinty-moore-beef-stew",
+      "name" : "Dinty Moore Beef Stew",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100005f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Edam Cheese, aged hard",
       "slug" : "edam-cheese-aged-hard",
+      "name" : "Edam Cheese, aged hard",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000061",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Enjoy Life Bars, Soft and Chewy, Cocoa Loco",
       "slug" : "enjoy-life-bars-soft-and-chewy-cocoa-loco",
+      "name" : "Enjoy Life Bars, Soft and Chewy, Cocoa Loco",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000065",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Fage Nonfat Greek Strained Yogurt",
       "slug" : "fage-nonfat-greek-strained-yogurt",
+      "name" : "Fage Nonfat Greek Strained Yogurt",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000067",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Fleischmann&#039;s Yeast, Highly Active, Dry",
       "slug" : "fleischmann-039-s-yeast-highly-active-dry",
+      "name" : "Fleischmann&#039;s Yeast, Highly Active, Dry",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000069",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Food Should Taste Good Tortilla Chips, Multigrain",
       "slug" : "food-should-taste-good-tortilla-chips-multigrain",
+      "name" : "Food Should Taste Good Tortilla Chips, Multigrain",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100006b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Fresh fruit, canned, dried, frozen",
       "slug" : "fresh-fruit-canned-dried-frozen",
+      "name" : "Fresh fruit, canned, dried, frozen",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100006d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Galaxy Nutritional Foods Veggie Slices",
       "slug" : "galaxy-nutritional-foods-veggie-slices",
+      "name" : "Galaxy Nutritional Foods Veggie Slices",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100006f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Breakfast Bars, Blueberry",
       "slug" : "glutino-breakfast-bars-blueberry",
+      "name" : "Glutino Breakfast Bars, Blueberry",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000071",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Cereal, Honey Nut",
       "slug" : "glutino-cereal-honey-nut",
+      "name" : "Glutino Cereal, Honey Nut",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000073",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Organic Bars, Chocolate &amp; Peanuts",
       "slug" : "glutino-organic-bars-chocolate-amp-peanuts",
+      "name" : "Glutino Organic Bars, Chocolate &amp; Peanuts",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000075",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Pizza, Gluten-Free, Duo Cheese",
       "slug" : "glutino-pizza-gluten-free-duo-cheese",
+      "name" : "Glutino Pizza, Gluten-Free, Duo Cheese",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000077",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Pretzel Twists, Gluten-Free",
       "slug" : "glutino-pretzel-twists-gluten-free",
+      "name" : "Glutino Pretzel Twists, Gluten-Free",
+      "category" : "food:other",
       "id" : "4df19e12f01f360001000079",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Wafer Cookies, Lemon",
       "slug" : "glutino-wafer-cookies-lemon",
+      "name" : "Glutino Wafer Cookies, Lemon",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100007b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Glutino Wafer Cookies, Vanilla",
       "slug" : "glutino-wafer-cookies-vanilla",
+      "name" : "Glutino Wafer Cookies, Vanilla",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100007d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Grande Tortilla Chips",
       "slug" : "grande-tortilla-chips",
+      "name" : "Grande Tortilla Chips",
+      "category" : "food:other",
       "id" : "4df19e12f01f36000100007f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Heinz Tomato Ketchup",
       "slug" : "heinz-tomato-ketchup",
+      "name" : "Heinz Tomato Ketchup",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000081",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Hellmann&#039;s Real Mayonnaise",
       "slug" : "hellmann-039-s-real-mayonnaise",
+      "name" : "Hellmann&#039;s Real Mayonnaise",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000083",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Holland House Cooking Wine, White",
       "slug" : "holland-house-cooking-wine-white",
+      "name" : "Holland House Cooking Wine, White",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000085",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Hormel Beef Roast, Au Jus",
       "slug" : "hormel-beef-roast-au-jus",
+      "name" : "Hormel Beef Roast, Au Jus",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000087",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Hormel Ham, Deli, Honey",
       "slug" : "hormel-ham-deli-honey",
+      "name" : "Hormel Ham, Deli, Honey",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000089",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Hormel Turkey, Deli, Oven Roasted",
       "slug" : "hormel-turkey-deli-oven-roasted",
+      "name" : "Hormel Turkey, Deli, Oven Roasted",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100008b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "I Can&#039;t Believe It&#039;s Not Butter! 60% Vegetable Oil",
       "slug" : "i-can-039-t-believe-it-039-s-not-butter-60-vegetable-oil",
+      "name" : "I Can&#039;t Believe It&#039;s Not Butter! 60% Vegetable Oil",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100008d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "I.M. Healthy SoyNut Butter, Original Creamy",
       "slug" : "i-m-healthy-soynut-butter-original-creamy",
+      "name" : "I.M. Healthy SoyNut Butter, Original Creamy",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100008f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Jennie-O Turkey Store Turkey Burgers, 95/5",
       "slug" : "jennie-o-turkey-store-turkey-burgers-95-5",
+      "name" : "Jennie-O Turkey Store Turkey Burgers, 95/5",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000091",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Jennie-O Turkey Store Turkey Patties, 95/5",
       "slug" : "jennie-o-turkey-store-turkey-patties-95-5",
+      "name" : "Jennie-O Turkey Store Turkey Patties, 95/5",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000093",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Justin&#039;s Almond Butter, Classic",
       "slug" : "justin-039-s-almond-butter-classic",
+      "name" : "Justin&#039;s Almond Butter, Classic",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000095",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Kettle Potato Chips, Baked, Hickory",
       "slug" : "kettle-potato-chips-baked-hickory",
+      "name" : "Kettle Potato Chips, Baked, Hickory",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000097",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Kettle Potato Chips, Sea Salt",
       "slug" : "kettle-potato-chips-sea-salt",
+      "name" : "Kettle Potato Chips, Sea Salt",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000099",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Kozy Shack All Natural Pudding, Original Rice",
       "slug" : "kozy-shack-all-natural-pudding-original-rice",
+      "name" : "Kozy Shack All Natural Pudding, Original Rice",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100009b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Kozy Shack Pudding, Original Rice",
       "slug" : "kozy-shack-pudding-original-rice",
+      "name" : "Kozy Shack Pudding, Original Rice",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100009d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "La Victoria Salsa, Cilantro, Medium",
       "slug" : "la-victoria-salsa-cilantro-medium",
+      "name" : "La Victoria Salsa, Cilantro, Medium",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100009f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Lactose-free milk",
       "slug" : "lactose-free-milk",
+      "name" : "Lactose-free milk",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000a1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Langers Juice, Apple",
       "slug" : "langers-juice-apple",
+      "name" : "Langers Juice, Apple",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000a3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Larabar Fruit &amp; Nut Food Bar, Cherry Pie",
       "slug" : "larabar-fruit-amp-nut-food-bar-cherry-pie",
+      "name" : "Larabar Fruit &amp; Nut Food Bar, Cherry Pie",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000a5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Lifeway Kefir Cultured Milk Smoothie",
       "slug" : "lifeway-kefir-cultured-milk-smoothie",
+      "name" : "Lifeway Kefir Cultured Milk Smoothie",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000a7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Maple Grove Farms of Vermont Dressing, Balsamic",
       "slug" : "maple-grove-farms-of-vermont-dressing-balsamic",
+      "name" : "Maple Grove Farms of Vermont Dressing, Balsamic",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000a9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Mary&#039;s Gone Crackers Crackers, Organic, Original",
       "slug" : "mary-039-s-gone-crackers-crackers-organic-original",
+      "name" : "Mary&#039;s Gone Crackers Crackers, Organic, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000ab",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "McCormick Almond Extract, Pure",
       "slug" : "mccormick-almond-extract-pure",
+      "name" : "McCormick Almond Extract, Pure",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000ad",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "McCormick Vanilla Extract, Pure",
       "slug" : "mccormick-vanilla-extract-pure",
+      "name" : "McCormick Vanilla Extract, Pure",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000af",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Meats, poultry, fish, shellfish",
       "slug" : "meats-poultry-fish-shellfish",
+      "name" : "Meats, poultry, fish, shellfish",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000b1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Minute Brown Rice, Natural Whole Grain",
       "slug" : "minute-brown-rice-natural-whole-grain",
+      "name" : "Minute Brown Rice, Natural Whole Grain",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000b3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Minute Chicken Rice Mix",
       "slug" : "minute-chicken-rice-mix",
+      "name" : "Minute Chicken Rice Mix",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000b5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Mountain High Yoghurt, All Natural, Low",
       "slug" : "mountain-high-yoghurt-all-natural-low",
+      "name" : "Mountain High Yoghurt, All Natural, Low",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000b7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Movie Theater Butter",
       "slug" : "movie-theater-butter",
+      "name" : "Movie Theater Butter",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000b9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Naked Juice Smoothie, Mango",
       "slug" : "naked-juice-smoothie-mango",
+      "name" : "Naked Juice Smoothie, Mango",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000bb",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Nasoya Tofu, Extra Firm",
       "slug" : "nasoya-tofu-extra-firm",
+      "name" : "Nasoya Tofu, Extra Firm",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000bd",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Nasoya Tofu, Super Firm, Cubed",
       "slug" : "nasoya-tofu-super-firm-cubed",
+      "name" : "Nasoya Tofu, Super Firm, Cubed",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000bf",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Nesquik Milk, Reduced Fat, Chocolate",
       "slug" : "nesquik-milk-reduced-fat-chocolate",
+      "name" : "Nesquik Milk, Reduced Fat, Chocolate",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000c1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Non-dairy milk substitutes (soy, rice)",
       "slug" : "non-dairy-milk-substitutes-soy-rice",
+      "name" : "Non-dairy milk substitutes (soy, rice)",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000c3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Nuts and seeds",
       "slug" : "nuts-and-seeds",
+      "name" : "Nuts and seeds",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000c5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ocean Spray Dried Cranberries,",
       "slug" : "ocean-spray-dried-cranberries",
+      "name" : "Ocean Spray Dried Cranberries,",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000c7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Old Orchard 100% Juice, Apple",
       "slug" : "old-orchard-100-juice-apple",
+      "name" : "Old Orchard 100% Juice, Apple",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000c9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Olive Oil, Tropical Mango",
       "slug" : "olive-oil-tropical-mango",
+      "name" : "Olive Oil, Tropical Mango",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000cb",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ore-Ida Potatoes, Cut Russet",
       "slug" : "ore-ida-potatoes-cut-russet",
+      "name" : "Ore-Ida Potatoes, Cut Russet",
       "id" : "4df19e13f01f3600010000cd",
+      "category" : "food:other",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ortega Taco Shells, Yellow Corn",
       "slug" : "ortega-taco-shells-yellow-corn",
+      "name" : "Ortega Taco Shells, Yellow Corn",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000cf",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Orville Redenbacher?s Popping Corn, Gourmet,",
       "slug" : "orville-redenbacher-s-popping-corn-gourmet",
+      "name" : "Orville Redenbacher?s Popping Corn, Gourmet,",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000d1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Pacific Chicken Broth, Free Range, Low Sodium",
       "slug" : "pacific-chicken-broth-free-range-low-sodium",
+      "name" : "Pacific Chicken Broth, Free Range, Low Sodium",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000d3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Parmesan Cheese, aged hard",
       "slug" : "parmesan-cheese-aged-hard",
+      "name" : "Parmesan Cheese, aged hard",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000d5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Peanut butter",
       "slug" : "peanut-butter",
+      "name" : "Peanut butter",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000d7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Perdue Chicken Breast, Carved, Grilled",
       "slug" : "perdue-chicken-breast-carved-grilled",
+      "name" : "Perdue Chicken Breast, Carved, Grilled",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000d9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Pik-Nik Potatoes, Shoestring, Original",
       "slug" : "pik-nik-potatoes-shoestring-original",
+      "name" : "Pik-Nik Potatoes, Shoestring, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000db",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Polaner Fruit Spread, Grape",
       "slug" : "polaner-fruit-spread-grape",
+      "name" : "Polaner Fruit Spread, Grape",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000dd",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Pompeian Balsamic Vinegar",
       "slug" : "pompeian-balsamic-vinegar",
+      "name" : "Pompeian Balsamic Vinegar",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000df",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Pompeian Olive Oil, Extra Virgin",
       "slug" : "pompeian-olive-oil-extra-virgin",
+      "name" : "Pompeian Olive Oil, Extra Virgin",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000e1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Pompeian Red Wine Vinegar",
       "slug" : "pompeian-red-wine-vinegar",
+      "name" : "Pompeian Red Wine Vinegar",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000e3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Popcorn",
       "slug" : "popcorn",
+      "name" : "Popcorn",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000e5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Potato chips",
       "slug" : "potato-chips",
+      "name" : "Potato chips",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000e7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Potato, parsnip, turnip, yucca and other tubers",
       "slug" : "potato-parsnip-turnip-yucca-and-other-tubers",
+      "name" : "Potato, parsnip, turnip, yucca and other tubers",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000e9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Potatoes, sweet potatoes, yams",
       "slug" : "potatoes-sweet-potatoes-yams",
+      "name" : "Potatoes, sweet potatoes, yams",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000eb",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Prego Italian Sauce, Flavored with Meat",
       "slug" : "prego-italian-sauce-flavored-with-meat",
+      "name" : "Prego Italian Sauce, Flavored with Meat",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000ed",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Prego Italian Sauce, Traditional",
       "slug" : "prego-italian-sauce-traditional",
+      "name" : "Prego Italian Sauce, Traditional",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000ef",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Progresso Soup, Creamy Mushroom",
       "slug" : "progresso-soup-creamy-mushroom",
+      "name" : "Progresso Soup, Creamy Mushroom",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000f1",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Progresso Soup, Garden Vegetable",
       "slug" : "progresso-soup-garden-vegetable",
+      "name" : "Progresso Soup, Garden Vegetable",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000f3",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Progresso Soup, Lentil",
       "slug" : "progresso-soup-lentil",
+      "name" : "Progresso Soup, Lentil",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000f5",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Ready-to-drink tea",
       "slug" : "ready-to-drink-tea",
+      "name" : "Ready-to-drink tea",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000f7",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Red Gold Tomatoes, Whole Peeled",
       "slug" : "red-gold-tomatoes-whole-peeled",
+      "name" : "Red Gold Tomatoes, Whole Peeled",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000f9",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Rice Dream Rice Drink, Original",
       "slug" : "rice-dream-rice-drink-original",
+      "name" : "Rice Dream Rice Drink, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000fb",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Sausages by Amylu Chicken Sausage,",
       "slug" : "sausages-by-amylu-chicken-sausage",
+      "name" : "Sausages by Amylu Chicken Sausage,",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000fd",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Schar Bread, Classic White",
       "slug" : "schar-bread-classic-white",
+      "name" : "Schar Bread, Classic White",
+      "category" : "food:other",
       "id" : "4df19e13f01f3600010000ff",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Schar Bread, Multigrain",
       "slug" : "schar-bread-multigrain",
+      "name" : "Schar Bread, Multigrain",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000101",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Schar Penne",
       "slug" : "schar-penne",
+      "name" : "Schar Penne",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000103",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Schar Pizza Crusts",
       "slug" : "schar-pizza-crusts",
+      "name" : "Schar Pizza Crusts",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000105",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Schar Rolls, Classic White",
       "slug" : "schar-rolls-classic-white",
+      "name" : "Schar Rolls, Classic White",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000107",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Silk Soymilk, Light, Original",
       "slug" : "silk-soymilk-light-original",
+      "name" : "Silk Soymilk, Light, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000109",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Silk Soymilk, Light, Vanilla",
       "slug" : "silk-soymilk-light-vanilla",
+      "name" : "Silk Soymilk, Light, Vanilla",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100010b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Silk Soymilk, Very Vanilla",
       "slug" : "silk-soymilk-very-vanilla",
+      "name" : "Silk Soymilk, Very Vanilla",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100010d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Smart Balance Buttery Spread",
       "slug" : "smart-balance-buttery-spread",
+      "name" : "Smart Balance Buttery Spread",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100010f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Smart Balance Buttery Spread, Non-Hydrogenated",
       "slug" : "smart-balance-buttery-spread-non-hydrogenated",
+      "name" : "Smart Balance Buttery Spread, Non-Hydrogenated",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000111",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Smart Balance Natural Peanut Butter",
       "slug" : "smart-balance-natural-peanut-butter",
+      "name" : "Smart Balance Natural Peanut Butter",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000113",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Smart Balance Peanut Butter, Real, Creamy",
       "slug" : "smart-balance-peanut-butter-real-creamy",
+      "name" : "Smart Balance Peanut Butter, Real, Creamy",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000115",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Snikiddy Corn Puffs, Baked, Grilled Cheese Puffs",
       "slug" : "snikiddy-corn-puffs-baked-grilled-cheese-puffs",
+      "name" : "Snikiddy Corn Puffs, Baked, Grilled Cheese Puffs",
       "id" : "4df19e13f01f360001000117",
+      "category" : "food:other",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Soft drinks",
       "slug" : "soft-drinks",
+      "name" : "Soft drinks",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000119",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Spread, Original",
       "slug" : "spread-original",
+      "name" : "Spread, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100011b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "St. Dalfour Wild Salmon with Vegetables",
       "slug" : "st-dalfour-wild-salmon-with-vegetables",
+      "name" : "St. Dalfour Wild Salmon with Vegetables",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100011d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Stonyfield Farm Yogurt, Organic, Low Fat",
       "slug" : "stonyfield-farm-yogurt-organic-low-fat",
+      "name" : "Stonyfield Farm Yogurt, Organic, Low Fat",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100011f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Strawberry Banana",
       "slug" : "strawberry-banana",
+      "name" : "Strawberry Banana",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000121",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Sun Dried Tomato &amp; Basil, Smoked",
       "slug" : "sun-dried-tomato-amp-basil-smoked",
+      "name" : "Sun Dried Tomato &amp; Basil, Smoked",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000123",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Swiss Chess, aged hard",
       "slug" : "swiss-chess-aged-hard",
+      "name" : "Swiss Chess, aged hard",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000125",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Think Thin High Protein Bar, Chunky Peanut Butter",
       "slug" : "think-thin-high-protein-bar-chunky-peanut-butter",
+      "name" : "Think Thin High Protein Bar, Chunky Peanut Butter",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000127",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Tinkyada Pasta, Brown Rice, Spaghetti Style",
       "slug" : "tinkyada-pasta-brown-rice-spaghetti-style",
+      "name" : "Tinkyada Pasta, Brown Rice, Spaghetti Style",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000129",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Tribe Hummus, Classic",
       "slug" : "tribe-hummus-classic",
+      "name" : "Tribe Hummus, Classic",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100012b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Tribe Hummus, Forty Spices",
       "slug" : "tribe-hummus-forty-spices",
+      "name" : "Tribe Hummus, Forty Spices",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100012d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Uncle Ben&#039;s Brown Rice, Whole Grain",
       "slug" : "uncle-ben-039-s-brown-rice-whole-grain",
+      "name" : "Uncle Ben&#039;s Brown Rice, Whole Grain",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100012f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Uncle Ben&#039;s Enriched Parboiled Rice",
       "slug" : "uncle-ben-039-s-enriched-parboiled-rice",
+      "name" : "Uncle Ben&#039;s Enriched Parboiled Rice",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000131",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Van&#039;s Gourmet Waffles, Original",
       "slug" : "van-039-s-gourmet-waffles-original",
+      "name" : "Van&#039;s Gourmet Waffles, Original",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000133",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Van&#039;s Waffles, Blueberry",
       "slug" : "van-039-s-waffles-blueberry",
+      "name" : "Van&#039;s Waffles, Blueberry",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000135",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Wish Bone Dressing, Italian",
       "slug" : "wish-bone-dressing-italian",
+      "name" : "Wish Bone Dressing, Italian",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000137",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Xochitl Authentic Corn Chips, Mexican Style",
       "slug" : "xochitl-authentic-corn-chips-mexican-style",
+      "name" : "Xochitl Authentic Corn Chips, Mexican Style",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000139",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Yoplait Yogurt, Fat Free, Blueberry Patc",
       "slug" : "yoplait-yogurt-fat-free-blueberry-patc",
+      "name" : "Yoplait Yogurt, Fat Free, Blueberry Patc",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100013b",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Yoplait Yogurt, Light, Fat Free, Very Cherry",
       "slug" : "yoplait-yogurt-light-fat-free-very-cherry",
+      "name" : "Yoplait Yogurt, Light, Fat Free, Very Cherry",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100013d",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Yoplait Yogurt, Low fat, Strawberry",
       "slug" : "yoplait-yogurt-low-fat-strawberry",
+      "name" : "Yoplait Yogurt, Low fat, Strawberry",
+      "category" : "food:other",
       "id" : "4df19e13f01f36000100013f",
       "tags" : [
          "food"
       ]
    },
    {
-      "name" : "Yoplait Yogurt, Nonfat",
       "slug" : "yoplait-yogurt-nonfat",
+      "name" : "Yoplait Yogurt, Nonfat",
+      "category" : "food:other",
       "id" : "4df19e13f01f360001000141",
       "tags" : [
          "food"
