@@ -3,6 +3,7 @@
 %table
   %tr
     %th Name
+    %th Category
     %th Show
     %th Edit
     %th Delete
@@ -10,6 +11,7 @@
   - @products.each do |product|
     %tr
       %td= product.name
+      %td= product.category
       %td= link_to 'Show', product
       %td= link_to 'Edit', edit_product_path(product)
       %td= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete

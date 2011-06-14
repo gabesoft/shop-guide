@@ -3,6 +3,7 @@
       "slug" : "p1-3",
       "name" : "p1",
       "id" : "4decf3593c5868bb66000015",
+      "category": "food",
       "tags" : [
          "1"
       ]
@@ -11,6 +12,7 @@
       "slug" : "p2-3",
       "name" : "p2",
       "id" : "4decf3593c5868bb66000019",
+      "category": "food",
       "tags" : [
          "1",
          "2"
@@ -20,6 +22,7 @@
       "slug" : "p3-3",
       "name" : "p3",
       "id" : "4decf3593c5868bb6600001d",
+      "category": "food",
       "tags" : [
          "1",
          "2",
@@ -30,6 +33,7 @@
       "slug" : "p4-3",
       "name" : "p4",
       "id" : "4decf3593c5868bb66000021",
+      "category": "food",
       "tags" : [
          "1",
          "2",

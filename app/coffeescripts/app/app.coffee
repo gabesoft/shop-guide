@@ -46,7 +46,6 @@ Ext.application(
         {
           region: 'east'
           xtype: 'shopping-list'
-          #border: false
           html: 'shopping list'
           margins: '5 5 250 5'
           flex: 2

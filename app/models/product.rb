@@ -3,9 +3,11 @@ class Product
 
   key :name, String, :required => true
   key :slug, String
+  key :category, String, :required => true
   key :tags, Array
 
   ensure_index :name
+  ensure_index :category
   ensure_index :tags
 
   after_validation :on => :create do

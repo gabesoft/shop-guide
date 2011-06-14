@@ -6,23 +6,24 @@ describe ProductsController do
   # Product. As you add validations to Product, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { :name => 'prod x', :tags => "a b,c d e, f,g,h, k"}
+    { :name => 'prod x', :category => "food:dairy", :tags => "a b,c d e, f,g,h, k"}
   end
 
   def products_range count
     ( 1 .. count ).
       to_a.
       map { |n| Product.create! :name => "product#{n}", 
+                                :category => "food:other",
                                 :tags => (1 .. n).to_a.map { |x| "t#{x}" } }
   end
 
   def create_products
     values = [
-      { :name => 'blue diamond',  :tags => ['jewelery'] },
-      { :name => 'cornflakes',    :tags => ['breakfast', 'food'] },
-      { :name => 'milk',          :tags => ['dairy', 'food'] },
-      { :name => 'shaving cream', :tags => ['beauty', 'health'] },
-      { :name => 'shampoo',       :tags => ['beauty', 'health'] },
+      { :name => 'blue diamond', :category => "food", :tags => ['jewelery'] },
+      { :name => 'cornflakes',   :category => "food", :tags => ['breakfast', 'food'] },
+      { :name => 'milk',         :category => "food", :tags => ['dairy', 'food'] },
+      { :name => 'shaving cream',:category => "food", :tags => ['beauty', 'health'] },
+      { :name => 'shampoo',      :category => "food", :tags => ['beauty', 'health'] },
     ]
     values.each { |v| Product.create! v }
   end
@@ -129,10 +130,11 @@ describe ProductsController do
     describe "with valid params" do
       it "updates the requested product" do
         product = Product.create! valid_attributes
-        Product.any_instance.
-          should_receive(:update_attributes).
-          with({:name => 'milk', :tags => ['dairy', 'food']})
-        put :update, :id => product.slug, :product => {:name => 'milk', :tags => 'dairy, food'}
+        updated = {:name => 'milk', :category => "food:dairy:milk 1%", :tags => 'dairy, food'}
+        expected = updated.clone
+        expected[:tags] = ['dairy', 'food']
+        Product.any_instance.should_receive(:update_attributes).with(expected)
+        put :update, :id => product.slug, :product => updated
       end
 
       it "assigns the requested product as @product" do
@@ -143,7 +145,7 @@ describe ProductsController do
 
       it "redirects to the product" do
         product = Product.create! valid_attributes
-        put :update, :id => product.slug, :product => { :name => 'prod y' }
+        put :update, :id => product.slug, :product => { :name => 'prod y', :category => product.category }
         response.should redirect_to(product)
       end
     end

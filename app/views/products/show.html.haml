@@ -5,6 +5,10 @@
   %span
     = @product.name
 %p.box
+  %label Category:
+  %span
+    = @product.category
+%p.box
   %label Tags:
   %span
     = @product.tags.join(', ')
