@@ -7,6 +7,7 @@ Ext.Loader.setPath(
 
 Ext.require([
   'Ext.Component',
+  'Ext.data.Model',
   'Ext.container.Viewport',
   'Ext.selection.CheckboxModel',
   'Ext.layout.container.Border',

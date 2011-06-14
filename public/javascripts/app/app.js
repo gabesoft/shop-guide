@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 14 Jun 2011 03:45:35 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 14 Jun 2011 04:19:40 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -10,7 +10,7 @@
     AppName: 'app',
     Ext: '/javascripts/lib/extjs/src'
   });
-  Ext.require(['Ext.Component', 'Ext.container.Viewport', 'Ext.selection.CheckboxModel', 'Ext.layout.container.Border', 'Ext.grid.*', 'Ext.data.*']);
+  Ext.require(['Ext.Component', 'Ext.data.Model', 'Ext.container.Viewport', 'Ext.selection.CheckboxModel', 'Ext.layout.container.Border', 'Ext.grid.*', 'Ext.data.*']);
   Ext.application({
     name: 'Shop Guide',
     launch: function() {
