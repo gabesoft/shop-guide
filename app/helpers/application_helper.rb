@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def javascript_include_extjs
     if Rails.env == 'production'
-      javascript_include_tag 'lib/extjs/ext.js'
+      javascript_include_tag 'lib/extjs/ext.js', 'app-all.js'
     else
       javascript_include_tag 'lib/extjs/ext-debug.js'
     end

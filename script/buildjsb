@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIRNAME="$(dirname $0)"
+JSDIR=$DIRNAME/../public/javascripts
+JSFILE=$JSDIR/app.jsb3
+
+echo $JSFILE
+
+sencha create jsb -a http://localhost:3000/ -p $JSFILE
+
+sed -i '.bak' 's/\.\.\/\.\.\/\.\.\/\/javascripts\///g' $JSFILE
+sencha build -p $JSFILE -d $JSDIR/
+
+rm -f $JSFILE
+rm -f $JSFILE.bak

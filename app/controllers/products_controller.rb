@@ -10,11 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def hint
-    names = Product.
-      where(search_options).
-      sort(:name).
-      fields(:name).
-      limit(10).all
+    names = Product.where(search_options).sort(:name).fields(:name).limit(10).all
     respond_to do |format|
       format.json { render :json => names }
       format.all { render :text => "only JSON format is supported" }
