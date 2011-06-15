@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 14 Jun 2011 04:19:40 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 15 Jun 2011 14:52:38 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -7,17 +7,18 @@
     enabled: true
   });
   Ext.Loader.setPath({
-    AppName: 'app',
+    AppName: 'SG',
     Ext: '/javascripts/lib/extjs/src'
   });
   Ext.require(['Ext.Component', 'Ext.data.Model', 'Ext.container.Viewport', 'Ext.selection.CheckboxModel', 'Ext.layout.container.Border', 'Ext.grid.*', 'Ext.data.*']);
   Ext.application({
-    name: 'Shop Guide',
+    name: 'SG',
+    controllers: ['Home'],
     launch: function() {
-      var combo, grid, shoppingList, viewport;
-      viewport = Ext.create('Ext.container.Viewport', {
+      var viewport;
+      return viewport = Ext.create('Ext.container.Viewport', {
         xtype: 'panel',
-        id: 'container-panel',
+        id: 'viewport',
         style: 'background: #fff',
         layout: 'border',
         items: [
@@ -50,15 +51,6 @@
             html: 'footer'
           }
         ]
-      });
-      combo = viewport.child('search-box[region=north]');
-      grid = viewport.child('search-results-grid[region=center]');
-      shoppingList = viewport.child('shopping-list[region=east]');
-      combo.on('search', function(query) {
-        return grid.loadProducts(query);
-      });
-      return grid.on('add-products', function(records) {
-        return shoppingList.addProducts(records);
       });
     }
   });

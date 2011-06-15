@@ -1,7 +1,7 @@
 Ext.Loader.setConfig (enabled: true)
 
 Ext.Loader.setPath(
-  AppName: 'app'
+  AppName: 'SG'
   Ext: '/javascripts/lib/extjs/src'
 )
 
@@ -16,11 +16,12 @@ Ext.require([
 ])
 
 Ext.application(
-  name: 'Shop Guide'
+  name: 'SG'
+  controllers: ['Home']
   launch: () ->
     viewport = Ext.create('Ext.container.Viewport',
       xtype: 'panel'
-      id: 'container-panel'
+      id: 'viewport'
       style: 'background: #fff'
       layout: 'border'
       items: [
@@ -58,11 +59,4 @@ Ext.application(
         }
       ]
     )
-
-    combo = viewport.child('search-box[region=north]')
-    grid = viewport.child('search-results-grid[region=center]')
-    shoppingList = viewport.child('shopping-list[region=east]')
-    
-    combo.on('search', (query) -> grid.loadProducts(query))
-    grid.on('add-products', (records) -> shoppingList.addProducts(records))
 )
