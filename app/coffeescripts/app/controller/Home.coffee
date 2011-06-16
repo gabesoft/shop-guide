@@ -2,17 +2,17 @@ Ext.define('SG.controller.Home',
   extend: 'Ext.app.Controller'
 
   refs: [
-    { ref: 'grid',      selector: 'viewport > search-results-grid[region=center]' }
-    { ref: 'sbox',      selector: 'viewport > search-box[region=north]' }
-    { ref: 'shopList',  selector: 'viewport > shopping-list[region=east]' }
+    { ref: 'grid',      selector: 'viewport > search-results-grid[ref=search-grid]' }
+    { ref: 'sbox',      selector: 'viewport > search-box[ref=search-box]' }
+    { ref: 'shopList',  selector: 'viewport > shopping-list[ref=shop-list]' }
   ]
 
   init: () ->
     console.log 'home initialized'
-    @control(
-      'viewport > search-results-grid[region=center]':
-        'add-products': (records) -> @getShopList().addProducts(records)
-      'viewport > search-box[region=north]':
-        search: (query) -> @getGrid().loadProducts(query)
-    )
+    grid = @refs[0].selector
+    sbox = @refs[1].selector
+    selectors = {}
+    selectors[grid] = 'add-products': (records) -> @getShopList().addProducts(records)
+    selectors[sbox] = 'search': (query) -> @getGrid().loadProducts(query)
+    @control selectors
 )

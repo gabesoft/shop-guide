@@ -2,7 +2,7 @@
    {
       "slug" : "100-juice",
       "name" : "100% juice",
-      "category" : "food:other",
+      "category" : "food:drinks:juice",
       "id" : "4df19e11f01f36000100000d",
       "tags" : [
          "food"
@@ -11,7 +11,7 @@
    {
       "slug" : "a-taste-of-thai-lite-coconut-milk",
       "name" : "A Taste of Thai Lite Coconut Milk",
-      "category" : "food:other",
+      "category" : "food:drinks:milk",
       "id" : "4df19e11f01f36000100000f",
       "tags" : [
          "food"
@@ -20,7 +20,7 @@
    {
       "slug" : "a-taste-of-thai-rice-noodles-straight-cut",
       "name" : "A Taste of Thai Rice Noodles, Straight Cut",
-      "category" : "food:other",
+      "category" : "food:asian:noodles",
       "id" : "4df19e11f01f360001000011",
       "tags" : [
          "food"
@@ -29,7 +29,7 @@
    {
       "slug" : "alouette-goat-cheese-crumbled",
       "name" : "Alouette Goat Cheese, Crumbled",
-      "category" : "food:other",
+      "category" : "food:dairy:cheese:goat cheese",
       "id" : "4df19e11f01f360001000013",
       "tags" : [
          "food"
@@ -38,7 +38,7 @@
    {
       "slug" : "amy-039-s-asian-noodle-stir-fry",
       "name" : "Amy&#039;s Asian Noodle, Stir Fry",
-      "category" : "food:other",
+      "category" : "food:asian:noodles",
       "id" : "4df19e11f01f360001000015",
       "tags" : [
          "food"
@@ -47,7 +47,7 @@
    {
       "slug" : "amy-039-s-enchilada-black-bean-vegetable",
       "name" : "Amy&#039;s Enchilada, Black Bean Vegetable",
-      "category" : "food:other",
+      "category" : "food:mexican",
       "id" : "4df19e11f01f360001000017",
       "tags" : [
          "food"
@@ -56,7 +56,7 @@
    {
       "slug" : "amy-039-s-tamale-verde-black-bean",
       "name" : "Amy&#039;s Tamale Verde, Black Bean",
-      "category" : "food:other",
+      "category" : "food:mexican",
       "id" : "4df19e12f01f360001000019",
       "tags" : [
          "food"
@@ -65,7 +65,7 @@
    {
       "slug" : "ancient-harvest-quinoa-inca-red",
       "name" : "Ancient Harvest Quinoa, Inca Red",
-      "category" : "food:other",
+      "category" : "food:grains:quinoa",
       "id" : "4df19e12f01f36000100001b",
       "tags" : [
          "food"
@@ -74,7 +74,7 @@
    {
       "slug" : "ancient-harvest-quinoa-traditional",
       "name" : "Ancient Harvest Quinoa, Traditional",
-      "category" : "food:other",
+      "category" : "food:grains:quinoa",
       "id" : "4df19e12f01f36000100001d",
       "tags" : [
          "food"
@@ -83,7 +83,7 @@
    {
       "slug" : "applegate-farms-turkey-breast-roasted",
       "name" : "Applegate Farms Turkey Breast, Roasted",
-      "category" : "food:other",
+      "category" : "food:meat:poultry:turkey",
       "id" : "4df19e12f01f36000100001f",
       "tags" : [
          "food"
@@ -92,7 +92,7 @@
    {
       "slug" : "argo-corn-starch-100-pure",
       "name" : "Argo Corn Starch, 100% Pure",
-      "category" : "food:other",
+      "category" : "food:vegetables:corn",
       "id" : "4df19e12f01f360001000021",
       "tags" : [
          "food"
@@ -101,7 +101,7 @@
    {
       "slug" : "beans-and-lentils",
       "name" : "Beans and lentils",
-      "category" : "food:other",
+      "category" : "food:vegetables:beans",
       "id" : "4df19e12f01f360001000023",
       "tags" : [
          "food"
@@ -110,7 +110,7 @@
    {
       "slug" : "buddig-corned-beef",
       "name" : "Buddig Corned Beef",
-      "category" : "food:other",
+      "category" : "food:meat:beef",
       "id" : "4df19e12f01f360001000043",
       "tags" : [
          "food"
@@ -119,7 +119,7 @@
    {
       "slug" : "corn-and-rice",
       "name" : "Corn and rice",
-      "category" : "food:other",
+      "category" : "food:grains:rice",
       "id" : "4df19e12f01f360001000055",
       "tags" : [
          "food"
@@ -128,7 +128,7 @@
    {
       "slug" : "eggs",
       "name" : "Eggs",
-      "category" : "food:other",
+      "category" : "food:eggs",
       "id" : "4df19e12f01f360001000063",
       "tags" : [
          "food"
@@ -137,7 +137,7 @@
    {
       "slug" : "betty-crocker-frosting-creamy-white",
       "name" : "Betty Crocker Frosting, Creamy White",
-      "category" : "food:other",
+      "category" : "food:desserts:cake frosting",
       "id" : "4df19e12f01f360001000025",
       "tags" : [
          "food"
@@ -155,7 +155,7 @@
    {
       "slug" : "blue-diamond-almonds",
       "name" : "Blue Diamond almonds",
-      "category" : "food:other",
+      "category" : "food:nuts:almonds",
       "id" : "4df19e12f01f360001000029",
       "tags" : [
          "food"
@@ -164,7 +164,7 @@
    {
       "slug" : "blue-diamond-cracker-snacks",
       "name" : "Blue Diamond Cracker Snacks",
-      "category" : "food:other",
+      "category" : "food:snacks:crackers",
       "id" : "4df19e12f01f36000100002b",
       "tags" : [
          "food"
@@ -200,7 +200,7 @@
    {
       "slug" : "bob-039-s-red-mill-flaxseed-meal-whole-ground",
       "name" : "Bob&#039;s Red Mill Flaxseed Meal, Whole Ground",
-      "category" : "food:other",
+      "category" : "food:grains:flaxseed",
       "id" : "4df19e12f01f360001000033",
       "tags" : [
          "food"

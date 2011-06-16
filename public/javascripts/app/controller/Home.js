@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Wed, 15 Jun 2011 14:52:38 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 16 Jun 2011 03:05:09 GMT from
  * /apps/shop_guide/app/coffeescripts/app/controller/Home.coffee
  */
 
@@ -8,29 +8,32 @@
     refs: [
       {
         ref: 'grid',
-        selector: 'viewport > search-results-grid[region=center]'
+        selector: 'viewport > search-results-grid[ref=search-grid]'
       }, {
         ref: 'sbox',
-        selector: 'viewport > search-box[region=north]'
+        selector: 'viewport > search-box[ref=search-box]'
       }, {
         ref: 'shopList',
-        selector: 'viewport > shopping-list[region=east]'
+        selector: 'viewport > shopping-list[ref=shop-list]'
       }
     ],
     init: function() {
+      var grid, sbox, selectors;
       console.log('home initialized');
-      return this.control({
-        'viewport > search-results-grid[region=center]': {
-          'add-products': function(records) {
-            return this.getShopList().addProducts(records);
-          }
-        },
-        'viewport > search-box[region=north]': {
-          search: function(query) {
-            return this.getGrid().loadProducts(query);
-          }
+      grid = this.refs[0].selector;
+      sbox = this.refs[1].selector;
+      selectors = {};
+      selectors[grid] = {
+        'add-products': function(records) {
+          return this.getShopList().addProducts(records);
         }
-      });
+      };
+      selectors[sbox] = {
+        'search': function(query) {
+          return this.getGrid().loadProducts(query);
+        }
+      };
+      return this.control(selectors);
     }
   });
 }).call(this);

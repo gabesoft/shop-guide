@@ -28,6 +28,7 @@ Ext.application(
         {
           region: 'north'
           xtype: 'search-box'
+          ref: 'search-box'
           border: false
           split: true
           margins: '40 450 50 5'
@@ -42,13 +43,14 @@ Ext.application(
         {
           region: 'center'
           xtype: 'search-results-grid'
+          ref: 'search-grid'
           margins: '5 5 250 5'
           flex: 4
         }
         {
           region: 'east'
           xtype: 'shopping-list'
-          html: 'shopping list'
+          ref: 'shop-list'
           margins: '5 5 250 5'
           flex: 2
         }
