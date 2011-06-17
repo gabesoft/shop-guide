@@ -143,7 +143,11 @@ class ProductsController < ApplicationController
     if searchQuery.empty? 
       [] 
     else
-      products = Product.where(:name => searchQueryPattern).fields(:name, :category).limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
+      products = Product.
+        where(:name => searchQueryPattern).
+        fields(:name, :category).
+        limit(10).all.
+        map { |p| { :name => p.name, :priority => 1 } }
 
       categories = Product.
         where(:category => searchQueryPattern).
