@@ -84,6 +84,20 @@ describe ProductsController do
         #products[0][:name].should eq 'shampoo'
         #products[1][:name].should eq 'shaving cream'
     end
+
+    it "should return filtered products in correct priority order" do
+      # TODO: products should be prioritized from the most specific match
+      #       products should be sorted by priority then name
+      create_products
+      get :index, :query => "prod"
+      products = (assigns :products).map { |p| { :name => p.name, :priority => p.priority } }
+      products.should eq [
+        { :name => 'foo bar product',  :priority => 1 },
+        { :name => 'foo bar',          :priority => 2 },
+        { :name => 'chinese vanilla',  :priority => 1 },
+        { :name => 'brazilian vanilla',:priority => 1 },
+      ]
+    end
   end
   
   describe "GET show" do

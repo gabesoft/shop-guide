@@ -33,12 +33,12 @@ Ext.define 'SG.view.SearchResultsGrid'
     )
 
     @callParent()
-    @addEvents('add-products': true)
+    @addEvents('addproducts': true)
 
     [addButton] = @query 'button[ref=add-button]'
     addButton.on('click', () => 
       selected = (r.data for r in @selModel.getSelection())
-      @fireEvent('add-products', selected)
+      @fireEvent('addproducts', selected)
     )
   
   loadProducts: (query) ->

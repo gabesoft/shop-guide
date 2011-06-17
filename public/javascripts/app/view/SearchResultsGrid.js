@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 04:18:15 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 15:13:37 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -53,7 +53,7 @@
       });
       this.callParent();
       this.addEvents({
-        'add-products': true
+        'addproducts': true
       });
       addButton = this.query('button[ref=add-button]')[0];
       return addButton.on('click', __bind(function() {
@@ -68,7 +68,7 @@
           }
           return _results;
         }).call(this);
-        return this.fireEvent('add-products', selected);
+        return this.fireEvent('addproducts', selected);
       }, this));
     },
     loadProducts: function(query) {

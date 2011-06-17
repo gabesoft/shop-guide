@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 16 Jun 2011 03:05:09 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 15:13:37 GMT from
  * /apps/shop_guide/app/coffeescripts/app/controller/Home.coffee
  */
 
@@ -24,12 +24,12 @@
       sbox = this.refs[1].selector;
       selectors = {};
       selectors[grid] = {
-        'add-products': function(records) {
+        addproducts: function(records) {
           return this.getShopList().addProducts(records);
         }
       };
       selectors[sbox] = {
-        'search': function(query) {
+        search: function(query) {
           return this.getGrid().loadProducts(query);
         }
       };
