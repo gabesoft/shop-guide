@@ -143,22 +143,18 @@ class ProductsController < ApplicationController
     if searchQuery.empty? 
       [] 
     else
-      products = Product
-      .where(:name => searchQueryPattern)
-      .fields(:name, :category).limit(10).all
-      .map { |p| { :name => p.name, :priority => 1 } }
+      products = Product.where(:name => searchQueryPattern).fields(:name, :category).limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
 
-      categories = Product
-      .where(:category => searchQueryPattern)
-      .fields(:category).all
-      .map { |p| p.category.split(':').reverse.each_with_index.map { |c,i| { :v => c, :i => i + 2 } } }
-      .map { |categories| categories.find_all { |h| searchQueryPattern.match(h[:v]) } }
-      .flatten
-      .map { |h| { :name => h[:v], :priority => h[:i] } }
+      categories = Product.
+        where(:category => searchQueryPattern).
+        fields(:category).all.
+        map { |p| p.category.split(':').reverse.each_with_index.map { |c,i| { :v => c, :i => i + 2 } } }.
+        map { |categories| categories.find_all { |h| searchQueryPattern.match(h[:v]) } }.
+        flatten.map { |h| { :name => h[:v], :priority => h[:i] } }
 
-      (products + categories)
-      .uniq { |c| c[:name] }
-      .sort! { |a, b| [ a[:priority], a[:name] ]<=> [ b[:priority], b[:name] ] }
+      (products + categories).
+        uniq { |c| c[:name] }.
+        sort! { |a, b| [ a[:priority], a[:name] ]<=> [ b[:priority], b[:name] ] }
     end
   end
 

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:15:15 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 05:10:18 GMT from
  * /apps/shop_guide/app/coffeescripts/app/model/Hint.coffee
  */
 
@@ -7,11 +7,11 @@
     extend: 'Ext.data.Model',
     fields: [
       {
-        name: 'id',
-        type: 'string'
-      }, {
         name: 'name',
         type: 'string'
+      }, {
+        name: 'priority',
+        type: 'int'
       }
     ]
   });
