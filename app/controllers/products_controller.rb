@@ -10,13 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def hint
-    names = Product.where(search_options).sort(:name).fields(:name).limit(10).all
     respond_to do |format|
-      format.json { render :json => names }
+      format.json { render :json => getHints }
       format.all { render :text => "only JSON format is supported" }
     end
   end
-
+  
   def show
     @product = Product.find_by_slug(params[:id])
     respond_to do |format|
@@ -119,14 +118,48 @@ class ProductsController < ApplicationController
     params[:product][:category]
   end
 
+  def searchQuery
+    params[:query] ? params[:query] : ''
+  end
+
+  def searchQueryPattern
+    /#{Regexp.quote searchQuery}/i
+  end
+
   def search_options
     options = {}
 
-    # TODO: add search by tags also (with priority)
-    if params[:query]
-      options[:name] = /#{Regexp.quote params[:query]}/i
+    if !searchQuery.empty?
+      options = { :$or => [ { :name => searchQueryPattern }, { :category => searchQueryPattern } ] }
     end
-
     options
-  end  
+  end
+  
+  def getFilteredProducts
+    # TODO: implement and remove search_options
+  end
+
+  def getHints
+    if searchQuery.empty? 
+      [] 
+    else
+      products = Product
+      .where(:name => searchQueryPattern)
+      .fields(:name, :category).limit(10).all
+      .map { |p| { :name => p.name, :priority => 1 } }
+
+      categories = Product
+      .where(:category => searchQueryPattern)
+      .fields(:category).all
+      .map { |p| p.category.split(':').reverse.each_with_index.map { |c,i| { :v => c, :i => i + 2 } } }
+      .map { |categories| categories.find_all { |h| searchQueryPattern.match(h[:v]) } }
+      .flatten
+      .map { |h| { :name => h[:v], :priority => h[:i] } }
+
+      (products + categories)
+      .uniq { |c| c[:name] }
+      .sort! { |a, b| [ a[:priority], a[:name] ]<=> [ b[:priority], b[:name] ] }
+    end
+  end
+
 end

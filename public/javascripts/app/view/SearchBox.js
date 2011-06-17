@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 03:33:07 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 05:04:51 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -24,11 +24,14 @@
         }
       });
       Ext.apply(this, {
-        hideLabel: false,
+        autoSelect: false,
+        forceSelection: false,
+        hideLabel: true,
         hideTrigger: true,
         typeAhead: false,
         minChars: 3,
         store: store,
+        emptyText: 'Enter a product, category, or manufacturer',
         queryMode: 'remote',
         displayField: 'name',
         valueField: 'name',

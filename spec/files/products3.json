@@ -37,7 +37,7 @@
    },
    {
       "slug" : "amy-039-s-asian-noodle-stir-fry",
-      "name" : "Amy&#039;s Asian Noodle, Stir Fry",
+      "name" : "Amy's Asian Noodle, Stir Fry",
       "category" : "food:asian:noodles",
       "id" : "4df19e11f01f360001000015",
       "tags" : [
@@ -46,7 +46,7 @@
    },
    {
       "slug" : "amy-039-s-enchilada-black-bean-vegetable",
-      "name" : "Amy&#039;s Enchilada, Black Bean Vegetable",
+      "name" : "Amy's Enchilada, Black Bean Vegetable",
       "category" : "food:mexican",
       "id" : "4df19e11f01f360001000017",
       "tags" : [
@@ -55,7 +55,7 @@
    },
    {
       "slug" : "amy-039-s-tamale-verde-black-bean",
-      "name" : "Amy&#039;s Tamale Verde, Black Bean",
+      "name" : "Amy's Tamale Verde, Black Bean",
       "category" : "food:mexican",
       "id" : "4df19e12f01f360001000019",
       "tags" : [
@@ -190,7 +190,7 @@
    },
    {
       "slug" : "bob-039-s-red-mill-bread-mix-hearty",
-      "name" : "Bob&#039;s Red Mill Bread Mix, Hearty",
+      "name" : "Bob's Red Mill Bread Mix, Hearty",
       "category" : "food:other",
       "id" : "4df19e12f01f360001000031",
       "tags" : [
@@ -199,7 +199,7 @@
    },
    {
       "slug" : "bob-039-s-red-mill-flaxseed-meal-whole-ground",
-      "name" : "Bob&#039;s Red Mill Flaxseed Meal, Whole Ground",
+      "name" : "Bob's Red Mill Flaxseed Meal, Whole Ground",
       "category" : "food:grains:flaxseed",
       "id" : "4df19e12f01f360001000033",
       "tags" : [
@@ -290,7 +290,7 @@
    {
       "slug" : "cheddar-cheese-aged-hard",
       "name" : "Cheddar Cheese, aged hard",
-      "category" : "food:other",
+      "category" : "food:dairy:cheese:cheddar",
       "id" : "4df19e12f01f360001000049",
       "tags" : [
          "food"
@@ -298,7 +298,7 @@
    },
    {
       "slug" : "chef-039-s-requested-beef-filet-angus",
-      "name" : "Chef&#039;s Requested Beef Filet, Angus",
+      "name" : "Chef's Requested Beef Filet, Angus",
       "category" : "food:other",
       "id" : "4df19e12f01f36000100004b",
       "tags" : [
@@ -389,7 +389,7 @@
    {
       "slug" : "edam-cheese-aged-hard",
       "name" : "Edam Cheese, aged hard",
-      "category" : "food:other",
+      "category" : "food:dairy:cheese:aged",
       "id" : "4df19e12f01f360001000061",
       "tags" : [
          "food"
@@ -415,7 +415,7 @@
    },
    {
       "slug" : "fleischmann-039-s-yeast-highly-active-dry",
-      "name" : "Fleischmann&#039;s Yeast, Highly Active, Dry",
+      "name" : "Fleischmann's Yeast, Highly Active, Dry",
       "category" : "food:other",
       "id" : "4df19e12f01f360001000069",
       "tags" : [
@@ -532,7 +532,7 @@
    },
    {
       "slug" : "hellmann-039-s-real-mayonnaise",
-      "name" : "Hellmann&#039;s Real Mayonnaise",
+      "name" : "Hellmann's Real Mayonnaise",
       "category" : "food:other",
       "id" : "4df19e13f01f360001000083",
       "tags" : [
@@ -577,7 +577,7 @@
    },
    {
       "slug" : "i-can-039-t-believe-it-039-s-not-butter-60-vegetable-oil",
-      "name" : "I Can&#039;t Believe It&#039;s Not Butter! 60% Vegetable Oil",
+      "name" : "I Can't Believe It's Not Butter! 60% Vegetable Oil",
       "category" : "food:other",
       "id" : "4df19e13f01f36000100008d",
       "tags" : [
@@ -613,7 +613,7 @@
    },
    {
       "slug" : "justin-039-s-almond-butter-classic",
-      "name" : "Justin&#039;s Almond Butter, Classic",
+      "name" : "Justin's Almond Butter, Classic",
       "category" : "food:other",
       "id" : "4df19e13f01f360001000095",
       "tags" : [
@@ -712,7 +712,7 @@
    },
    {
       "slug" : "mary-039-s-gone-crackers-crackers-organic-original",
-      "name" : "Mary&#039;s Gone Crackers Crackers, Organic, Original",
+      "name" : "Mary's Gone Crackers Crackers, Organic, Original",
       "category" : "food:other",
       "id" : "4df19e13f01f3600010000ab",
       "tags" : [
@@ -902,7 +902,7 @@
    {
       "slug" : "parmesan-cheese-aged-hard",
       "name" : "Parmesan Cheese, aged hard",
-      "category" : "food:other",
+      "category" : "food:dairy:cheese:aged",
       "id" : "4df19e13f01f3600010000d5",
       "tags" : [
          "food"
@@ -1306,7 +1306,7 @@
    },
    {
       "slug" : "uncle-ben-039-s-brown-rice-whole-grain",
-      "name" : "Uncle Ben&#039;s Brown Rice, Whole Grain",
+      "name" : "Uncle Ben's Brown Rice, Whole Grain",
       "category" : "food:other",
       "id" : "4df19e13f01f36000100012f",
       "tags" : [
@@ -1315,7 +1315,7 @@
    },
    {
       "slug" : "uncle-ben-039-s-enriched-parboiled-rice",
-      "name" : "Uncle Ben&#039;s Enriched Parboiled Rice",
+      "name" : "Uncle Ben's Enriched Parboiled Rice",
       "category" : "food:other",
       "id" : "4df19e13f01f360001000131",
       "tags" : [
@@ -1324,7 +1324,7 @@
    },
    {
       "slug" : "van-039-s-gourmet-waffles-original",
-      "name" : "Van&#039;s Gourmet Waffles, Original",
+      "name" : "Van's Gourmet Waffles, Original",
       "category" : "food:other",
       "id" : "4df19e13f01f360001000133",
       "tags" : [
@@ -1333,7 +1333,7 @@
    },
    {
       "slug" : "van-039-s-waffles-blueberry",
-      "name" : "Van&#039;s Waffles, Blueberry",
+      "name" : "Van's Waffles, Blueberry",
       "category" : "food:other",
       "id" : "4df19e13f01f360001000135",
       "tags" : [

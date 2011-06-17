@@ -26,6 +26,7 @@ describe ProductsController do
       { :name => 'shaved chocolate',      :category => "food:sweets:chocolate", :tags => ['beauty', 'health'] },
       { :name => 'whipped cream',         :category => "food:sweets:cake frosting", :tags => ['beauty', 'health'] },
       { :name => 'brazilian vanilla',     :category => "food:spice product:vanilla", :tags => ['beauty', 'health'] },
+      { :name => 'chinese vanilla',       :category => "food:spice product:vanilla", :tags => ['beauty', 'health'] },
       { :name => 'foo bar',               :category => "food:prod cat 1:prod cat 2", :tags => ['beauty', 'health'] },
       { :name => 'foo bar product',       :category => "food:other", :tags => ['beauty', 'health'] },
     ]
@@ -33,31 +34,23 @@ describe ProductsController do
   end
 
   describe "GET hint" do
-    #it "should get only filtered names" do
-      #create_products
-      #get :hint, :query => 'sh', :format => :json
-      #items = JSON.parse(response.body)
-      #hints = items.map { |p| p[:name.to_s] }
-      #hints.should eq [ 'shampoo', 'shaving cream' ]
-    #end
-
     it "should get only the first ten matching names" do
       products_range 20
-      get :hint, :name => 'prod', :format => :json
+      get :hint, :query => 'prod', :format => :json
       JSON.parse(response.body).count.should eq 10
     end
 
     it "should get the first ten matching names and all matching categories" do
       products_range 20
       create_products
-      get :hint, :name => 'prod', :format => :json
+      get :hint, :query => 'prod', :format => :json
       products = JSON.parse response.body
-      products.count.should eq 12
+      products.length.should eq 13
     end
 
     it "should prioritize names, more specific categories, less specific categories" do
       create_products
-      get :hint, :name => 'prod', :format => :json
+      get :hint, :query => 'prod', :format => :json
       products = JSON.parse response.body
       hints = products.map { |p| { :name => p.name, :priority => p.priority } }
       hints.should eq [
@@ -65,6 +58,13 @@ describe ProductsController do
         { :name => 'foo bar',           :priority => 2 },
         { :name => 'brazilian vanilla', :priority => 3 },
       ]
+    end
+
+    it "should return distinct names in results" do
+      create_products
+      get :hint, :query => 'spice', :format => :json
+      hints = JSON.parse response.body
+      hints.should eq [ { "name" => "spice product", "priority" => 3 } ]
     end
   end
 
