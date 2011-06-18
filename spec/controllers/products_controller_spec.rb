@@ -50,17 +50,16 @@ describe ProductsController do
     end
 
     it "should prioritize names, more specific categories, less specific categories" do
-      # TODO: the priority should depend on the path from root not from leaves
       create_products
       get :hint, :query => 'prod', :format => :json
       hints = JSON.parse response.body
       hints.should eq [
         { 'name' => 'fancy product',    'priority' => 1 },
         { 'name' => 'foo bar product',  'priority' => 1 },
-        { 'name' => 'prod cat 2',       'priority' => 2 },
-        { 'name' => 'prod cat 1',       'priority' => 3 },
-        { 'name' => 'product',          'priority' => 3 },
-        { 'name' => 'spice product',    'priority' => 3 },
+        { 'name' => 'prod cat 2',       'priority' => 998 },
+        { 'name' => 'product',          'priority' => 998 },
+        { 'name' => 'prod cat 1',       'priority' => 999 },
+        { 'name' => 'spice product',    'priority' => 999 },
       ]
     end
 
@@ -68,7 +67,7 @@ describe ProductsController do
       create_products
       get :hint, :query => 'spice', :format => :json
       hints = JSON.parse response.body
-      hints.should eq [ { "name" => "spice product", "priority" => 3 } ]
+      hints.should eq [ { "name" => "spice product", "priority" => 999 } ]
     end
   end
 
@@ -88,9 +87,9 @@ describe ProductsController do
       products.should eq [
         { :name => 'fancy product',     :priority => 1 },
         { :name => 'foo bar product',   :priority => 1 },
-        { :name => 'foo bar',           :priority => 2 },
-        { :name => 'brazilian vanilla', :priority => 3 },
-        { :name => 'chinese vanilla',   :priority => 3 },
+        { :name => 'foo bar',           :priority => 998 },
+        { :name => 'brazilian vanilla', :priority => 999 },
+        { :name => 'chinese vanilla',   :priority => 999 },
       ]
     end
   end

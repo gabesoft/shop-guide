@@ -137,7 +137,9 @@ class ProductsController < ApplicationController
 
       by_name.each { |p| p.add_attrs :priority => 1 }
       by_category.each do |p|
-        categories = (categories_indexed p).find_all { |c| search_query_pattern.match(c[:name]) }
+        categories = (categories_indexed p).
+          find_all { |c| search_query_pattern.match(c[:name]) }.
+          sort { |a, b| a[:value] <=> b[:value] }
         p.add_attrs :priority => categories[0][:value] 
       end
       
@@ -146,7 +148,8 @@ class ProductsController < ApplicationController
   end
   
   def categories_indexed product
-    product.category.split(':').reverse.each_with_index.map { |c,i| { :name => c, :value => i + 2 } } 
+    seed = 1000
+    product.category.split(':').each_with_index.map { |c,i| { :name => c, :value => seed - i } } 
   end
 
   def get_hints
