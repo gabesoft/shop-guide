@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
     @products = get_filtered_products
 
@@ -139,19 +140,14 @@ class ProductsController < ApplicationController
       by_category.each do |p|
         categories = (categories_indexed p).
           find_all { |c| search_query_pattern.match(c[:name]) }.
-          sort { |a, b| a[:value] <=> b[:value] }
-        p.add_attrs :priority => categories[0][:value] 
+          sort! { |a, b| a[:priority] <=> b[:priority] }
+        p.add_attrs :priority => categories[0][:priority] 
       end
       
-      (by_name + by_category).sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ]}
+      (by_name + by_category).sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ] }
     end
   end
   
-  def categories_indexed product
-    seed = 1000
-    product.category.split(':').each_with_index.map { |c,i| { :name => c, :value => seed - i } } 
-  end
-
   def get_hints
     if search_query.empty? 
       [] 
@@ -159,20 +155,23 @@ class ProductsController < ApplicationController
       products = Product.
         where(:name => search_query_pattern).
         fields(:name, :category).
-        limit(10).all.
-        map { |p| { :name => p.name, :priority => 1 } }
+        limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
 
       categories = Product.
         where(:category => search_query_pattern).
         fields(:category).all.
-        map { |p| categories_indexed p }.
-        map { |categories| categories.find_all { |h| search_query_pattern.match(h[:name]) } }.
-        flatten.map { |h| { :name => h[:name], :priority => h[:value] } }
+        map { |p| (categories_indexed p).find_all { |h| search_query_pattern.match(h[:name]) } }.
+        flatten
 
       (products + categories).
         uniq { |c| c[:name] }.
         sort! { |a, b| [ a[:priority], a[:name] ] <=> [ b[:priority], b[:name] ] }
     end
+  end
+
+  def categories_indexed product
+    seed = 1000
+    product.category.split(':').each_with_index.map { |c,i| { :name => c, :priority => seed - i } } 
   end
 
 end
