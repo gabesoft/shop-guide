@@ -53,4 +53,14 @@ describe Product do
     products.count.should eq 1
     products[0].id.should eq "myuniqueid"
   end
+
+  it "should serialize dynamic properties to json" do
+    Product.create! :name => "dynamic product", :category => "stuff", :tags => [], :id => "uniq1"
+    product = Product.find "uniq1"
+    product.add_attrs :relevance => 4
+    json = product.to_json :methods => [ :relevance ]
+    copy = JSON.parse json
+    product.relevance.should eq 4
+    copy['relevance'].should eq 4
+  end
 end

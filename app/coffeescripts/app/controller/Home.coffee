@@ -8,11 +8,12 @@ Ext.define('SG.controller.Home',
   ]
 
   init: () ->
-    console.log 'home initialized'
     grid = @refs[0].selector
     sbox = @refs[1].selector
     selectors = {}
     selectors[grid] = addproducts: (records) -> @getShopList().addProducts(records)
-    selectors[sbox] = search: (query) -> @getGrid().loadProducts(query)
+    selectors[sbox] = search: (query) -> 
+      @getSbox().collapse()
+      @getGrid().loadProducts(query)
     @control selectors
 )

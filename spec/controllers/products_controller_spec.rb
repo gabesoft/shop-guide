@@ -29,6 +29,7 @@ describe ProductsController do
       { :name => 'chinese vanilla',       :category => "food:spice product:vanilla", :tags => ['beauty', 'health'] },
       { :name => 'foo bar',               :category => "food:prod cat 1:prod cat 2", :tags => ['beauty', 'health'] },
       { :name => 'foo bar product',       :category => "food:other", :tags => ['beauty', 'health'] },
+      { :name => 'fancy product',         :category => "food:other:product:b:c", :tags => ['beauty', 'health'] },
     ]
     values.each { |v| Product.create! v }
   end
@@ -44,19 +45,22 @@ describe ProductsController do
       products_range 20
       create_products
       get :hint, :query => 'prod', :format => :json
-      products = JSON.parse response.body
-      products.length.should eq 13
+      hints = JSON.parse response.body
+      hints.length.should eq 14
     end
 
     it "should prioritize names, more specific categories, less specific categories" do
+      # TODO: the priority should depend on the path from root not from leaves
       create_products
       get :hint, :query => 'prod', :format => :json
-      products = JSON.parse response.body
-      hints = products.map { |p| { :name => p.name, :priority => p.priority } }
+      hints = JSON.parse response.body
       hints.should eq [
-        { :name => 'foo bar product',   :priority => 1 },
-        { :name => 'foo bar',           :priority => 2 },
-        { :name => 'brazilian vanilla', :priority => 3 },
+        { 'name' => 'fancy product',    'priority' => 1 },
+        { 'name' => 'foo bar product',  'priority' => 1 },
+        { 'name' => 'prod cat 2',       'priority' => 2 },
+        { 'name' => 'prod cat 1',       'priority' => 3 },
+        { 'name' => 'product',          'priority' => 3 },
+        { 'name' => 'spice product',    'priority' => 3 },
       ]
     end
 
@@ -75,27 +79,18 @@ describe ProductsController do
       assigns(:products).should eq([product])
     end
 
-    it "should filter products by name and category" do
-        #TODO: implement
-        #create_products
-        #get :index, :query => 'sh'
-        #products = assigns :products
-        #products.count.should eq 2
-        #products[0][:name].should eq 'shampoo'
-        #products[1][:name].should eq 'shaving cream'
-    end
-
-    it "should return filtered products in correct priority order" do
-      # TODO: products should be prioritized from the most specific match
-      #       products should be sorted by priority then name
+    it "should return filtered products sorted by relevance then name" do
+      # products should be prioritized from the most specific match
+      # products should be sorted by priority then name
       create_products
       get :index, :query => "prod"
       products = (assigns :products).map { |p| { :name => p.name, :priority => p.priority } }
       products.should eq [
-        { :name => 'foo bar product',  :priority => 1 },
-        { :name => 'foo bar',          :priority => 2 },
-        { :name => 'chinese vanilla',  :priority => 1 },
-        { :name => 'brazilian vanilla',:priority => 1 },
+        { :name => 'fancy product',     :priority => 1 },
+        { :name => 'foo bar product',   :priority => 1 },
+        { :name => 'foo bar',           :priority => 2 },
+        { :name => 'brazilian vanilla', :priority => 3 },
+        { :name => 'chinese vanilla',   :priority => 3 },
       ]
     end
   end

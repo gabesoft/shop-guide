@@ -18,22 +18,6 @@ class Product
     first :conditions => { :slug => slug }
   end
 
-  def to_param
-    self.slug || self.id
-  end
-
-  def convert_to_slug(str)
-    if defined?(ActiveSupport::Inflector.parameterize)
-      ActiveSupport::Inflector.parameterize(str).to_s
-    else
-      ActiveSupport::Multibyte::Handlers::UTF8Handler.
-        normalize(str,:d).split(//u).
-        reject { |e| e.length > 1 }.
-        join.strip.gsub(/[^a-z0-9]+/i, '-').
-        downcase.gsub(/-+$/, '')
-    end
-  end
-
   # todo: fix subjectivity to race conditions
   # generates a slug only if one hasn't been generated already
   def create_slug
@@ -46,5 +30,31 @@ class Product
       tail = "-#{count}"
     end
     self.slug = initial + tail
+  end
+
+  def add_attrs(attrs)
+    attrs.each do |var, value|
+      class_eval { attr_accessor var }
+      instance_variable_get "@#{var}"
+      instance_variable_set "@#{var}", value
+    end
+  end
+
+  def to_param
+    self.slug || self.id
+  end
+
+  private
+
+  def convert_to_slug(str)
+    if defined?(ActiveSupport::Inflector.parameterize)
+      ActiveSupport::Inflector.parameterize(str).to_s
+    else
+      ActiveSupport::Multibyte::Handlers::UTF8Handler.
+        normalize(str,:d).split(//u).
+        reject { |e| e.length > 1 }.
+        join.strip.gsub(/[^a-z0-9]+/i, '-').
+        downcase.gsub(/-+$/, '')
+    end
   end
 end

@@ -20,8 +20,8 @@ Ext.define 'SG.view.SearchResultsGrid'
       store: store
       selModel: selModel
       columns: [
-        { text: 'Product', dataIndex: 'name', flex: 1 }
-        { text: 'Tags', dataIndex: 'tags' }
+        { text: 'Product', dataIndex: 'name', flex: 5 }
+        { text: 'Category', dataIndex: 'category', flex: 2 }
       ]
       bbar: [
         { xtype: 'button', text: 'Add to shopping list', ref: 'add-button'}

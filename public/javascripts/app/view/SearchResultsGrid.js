@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 15:13:37 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 18 Jun 2011 01:09:43 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -33,10 +33,11 @@
           {
             text: 'Product',
             dataIndex: 'name',
-            flex: 1
+            flex: 5
           }, {
-            text: 'Tags',
-            dataIndex: 'tags'
+            text: 'Category',
+            dataIndex: 'category',
+            flex: 2
           }
         ],
         bbar: [

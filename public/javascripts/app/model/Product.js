@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 13 Jun 2011 00:13:07 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 18 Jun 2011 01:08:26 GMT from
  * /apps/shop_guide/app/coffeescripts/app/model/Product.coffee
  */
 
@@ -15,6 +15,12 @@
       }, {
         name: 'tags',
         type: 'array'
+      }, {
+        name: 'category',
+        type: 'string'
+      }, {
+        name: 'priority',
+        type: 'int'
       }
     ]
   });

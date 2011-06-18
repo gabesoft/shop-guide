@@ -1,17 +1,17 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.where(search_options).sort(:name).all
+    @products = get_filtered_products
 
     respond_to do |format|
       format.html
       format.xml  { render :xml => @products }
-      format.json  { render :json => @products.to_json }
+      format.json  { render :json => ( @products.to_json :methods => [ :priority ] ) }
     end
   end
 
   def hint
     respond_to do |format|
-      format.json { render :json => getHints }
+      format.json { render :json => get_hints }
       format.all { render :text => "only JSON format is supported" }
     end
   end
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @product }
-      format.json  { render :json => @product.to_json }
+      format.json  { render :json => @product }
     end
   end
 
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(:name => productName, :category => productCategory, :tags => productTags)
+    @product = Product.new(:name => product_name, :category => product_category, :tags => product_tags)
 
     respond_to do |format|
       if @product.save
@@ -59,7 +59,7 @@ class ProductsController < ApplicationController
     @product = Product.find_by_slug(params[:id])
 
     respond_to do |format|
-      if @product.update_attributes(:name => productName, :category => productCategory, :tags => productTags)
+      if @product.update_attributes(:name => product_name, :category => product_category, :tags => product_tags)
         format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
         format.xml  { head :ok }
         format.json  { head :ok }
@@ -106,59 +106,69 @@ class ProductsController < ApplicationController
 
   private
 
-  def productName
+  def product_name
     params[:product][:name]
   end
 
-  def productTags
+  def product_tags
     params[:product][:tags].nil? ? [] : params[:product][:tags].split(/, */)
   end
 
-  def productCategory
+  def product_category
     params[:product][:category]
   end
 
-  def searchQuery
+  def search_query
     params[:query] ? params[:query] : ''
   end
 
-  def searchQueryPattern
-    /#{Regexp.quote searchQuery}/i
+  def search_query_pattern
+    /#{Regexp.quote search_query}/i
   end
 
-  def search_options
-    options = {}
+  def get_filtered_products
+    if search_query.empty?
+      Product.sort(:name).all.each { |p| p.add_attrs :priority => 1 }
+    else
+      by_name = Product.where(:name => search_query_pattern).all
+      by_category = Product.
+        where(:category => search_query_pattern).all.
+        find_all { |p| !search_query_pattern.match p[:name] }
 
-    if !searchQuery.empty?
-      options = { :$or => [ { :name => searchQueryPattern }, { :category => searchQueryPattern } ] }
+      by_name.each { |p| p.add_attrs :priority => 1 }
+      by_category.each do |p|
+        categories = (categories_indexed p).find_all { |c| search_query_pattern.match(c[:name]) }
+        p.add_attrs :priority => categories[0][:value] 
+      end
+      
+      (by_name + by_category).sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ]}
     end
-    options
   end
   
-  def getFilteredProducts
-    # TODO: implement and remove search_options
+  def categories_indexed product
+    product.category.split(':').reverse.each_with_index.map { |c,i| { :name => c, :value => i + 2 } } 
   end
 
-  def getHints
-    if searchQuery.empty? 
+  def get_hints
+    if search_query.empty? 
       [] 
     else
       products = Product.
-        where(:name => searchQueryPattern).
+        where(:name => search_query_pattern).
         fields(:name, :category).
         limit(10).all.
         map { |p| { :name => p.name, :priority => 1 } }
 
       categories = Product.
-        where(:category => searchQueryPattern).
+        where(:category => search_query_pattern).
         fields(:category).all.
-        map { |p| p.category.split(':').reverse.each_with_index.map { |c,i| { :v => c, :i => i + 2 } } }.
-        map { |categories| categories.find_all { |h| searchQueryPattern.match(h[:v]) } }.
-        flatten.map { |h| { :name => h[:v], :priority => h[:i] } }
+        map { |p| categories_indexed p }.
+        map { |categories| categories.find_all { |h| search_query_pattern.match(h[:name]) } }.
+        flatten.map { |h| { :name => h[:name], :priority => h[:value] } }
 
       (products + categories).
         uniq { |c| c[:name] }.
-        sort! { |a, b| [ a[:priority], a[:name] ]<=> [ b[:priority], b[:name] ] }
+        sort! { |a, b| [ a[:priority], a[:name] ] <=> [ b[:priority], b[:name] ] }
     end
   end
 
