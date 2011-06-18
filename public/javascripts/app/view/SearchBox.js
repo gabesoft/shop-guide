@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 05:04:51 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 18 Jun 2011 17:04:09 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -15,7 +15,7 @@
         proxy: {
           type: 'ajax',
           method: 'GET',
-          url: hint_products_path({
+          url: search_producthints_path({
             format: 'json'
           }),
           reader: {

@@ -11,7 +11,7 @@ Ext.define 'SG.view.SearchResultsGrid'
       proxy:
         type: 'ajax'
         method: 'GET'
-        url: products_path(format: 'json')
+        url: search_products_path(format: 'json')
         reader:
           type: 'json'
     )

@@ -10,8 +10,11 @@ ShopGuide::Application.routes.draw do
     post :clear, :action => :destroy_all, :on => :collection
     post :import, :action => :import, :on => :collection
     post :export, :action => :export, :on => :collection
-    get :hint, :action => :hint, :on => :collection
+    #get :hint, :action => :hint, :on => :collection
   end
+
+  get "search/products", :to => "search#products"
+  get "search/producthints", :to => "search#producthints"
 
   #post "products/clear", :to => "products#destroy_all"
   #get "products/all.json", :to => "products#extract_all", :as => :products_all

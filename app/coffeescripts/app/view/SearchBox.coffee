@@ -9,7 +9,7 @@ Ext.define 'SG.view.SearchBox'
       proxy:
         type: 'ajax'
         method: 'GET'
-        url: hint_products_path(format: 'json')
+        url: search_producthints_path(format: 'json')
         reader:
           type: 'json'
     )

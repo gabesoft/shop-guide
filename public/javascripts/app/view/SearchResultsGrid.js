@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sat, 18 Jun 2011 01:09:43 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 18 Jun 2011 17:04:09 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchResultsGrid.coffee
  */
 
@@ -18,7 +18,7 @@
         proxy: {
           type: 'ajax',
           method: 'GET',
-          url: products_path({
+          url: search_products_path({
             format: 'json'
           }),
           reader: {

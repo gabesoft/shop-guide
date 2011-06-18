@@ -1,24 +1,17 @@
 class ProductsController < ApplicationController
+  before_filter :find_by_slug, :only => [ :show, :edit, :update, :destroy ]
 
   def index
-    @products = get_filtered_products
+    @products = Product.sort(:name).all
 
     respond_to do |format|
       format.html
       format.xml  { render :xml => @products }
-      format.json  { render :json => ( @products.to_json :methods => [ :priority ] ) }
+      format.json  { render :json => @products }
     end
   end
 
-  def hint
-    respond_to do |format|
-      format.json { render :json => get_hints }
-      format.all { render :text => "only JSON format is supported" }
-    end
-  end
-  
   def show
-    @product = Product.find_by_slug(params[:id])
     respond_to do |format|
       format.html
       format.xml  { render :xml => @product }
@@ -37,7 +30,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find_by_slug(params[:id])
   end
 
   def create
@@ -57,8 +49,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product = Product.find_by_slug(params[:id])
-
     respond_to do |format|
       if @product.update_attributes(:name => product_name, :category => product_category, :tags => product_tags)
         format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
@@ -73,7 +63,6 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find_by_slug(params[:id])
     @product.destroy
 
     respond_to do |format|
@@ -107,6 +96,10 @@ class ProductsController < ApplicationController
 
   private
 
+  def find_by_slug
+    @product = Product.find_by_slug(params[:id])
+  end
+
   def product_name
     params[:product][:name]
   end
@@ -118,60 +111,4 @@ class ProductsController < ApplicationController
   def product_category
     params[:product][:category]
   end
-
-  def search_query
-    params[:query] ? params[:query] : ''
-  end
-
-  def search_query_pattern
-    /#{Regexp.quote search_query}/i
-  end
-
-  def get_filtered_products
-    if search_query.empty?
-      Product.sort(:name).all.each { |p| p.add_attrs :priority => 1 }
-    else
-      by_name = Product.where(:name => search_query_pattern).all
-      by_category = Product.
-        where(:category => search_query_pattern).all.
-        find_all { |p| !search_query_pattern.match p[:name] }
-
-      by_name.each { |p| p.add_attrs :priority => 1 }
-      by_category.each do |p|
-        categories = (categories_indexed p).
-          find_all { |c| search_query_pattern.match(c[:name]) }.
-          sort! { |a, b| a[:priority] <=> b[:priority] }
-        p.add_attrs :priority => categories[0][:priority] 
-      end
-      
-      (by_name + by_category).sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ] }
-    end
-  end
-  
-  def get_hints
-    if search_query.empty? 
-      [] 
-    else
-      products = Product.
-        where(:name => search_query_pattern).
-        fields(:name, :category).
-        limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
-
-      categories = Product.
-        where(:category => search_query_pattern).
-        fields(:category).all.
-        map { |p| (categories_indexed p).find_all { |h| search_query_pattern.match(h[:name]) } }.
-        flatten
-
-      (products + categories).
-        uniq { |c| c[:name] }.
-        sort! { |a, b| [ a[:priority], a[:name] ] <=> [ b[:priority], b[:name] ] }
-    end
-  end
-
-  def categories_indexed product
-    seed = 1000
-    product.category.split(':').each_with_index.map { |c,i| { :name => c, :priority => seed - i } } 
-  end
-
 end
