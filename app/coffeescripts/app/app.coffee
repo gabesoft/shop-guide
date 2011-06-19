@@ -31,7 +31,7 @@ Ext.application(
           ref: 'search-box'
           border: false
           split: true
-          margins: '40 450 50 5'
+          margin: '30 140 25 140'
         }
         {
           region: 'west'

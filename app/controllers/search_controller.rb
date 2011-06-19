@@ -26,7 +26,7 @@ class SearchController < ApplicationController
 
   def get_products
     if search_query.empty?
-      Product.sort(:name).all.each { |p| p.add_attrs :priority => 1 }
+      []
     else
       by_name = Product.where(:name => search_query_pattern).all
       by_category = Product.
@@ -36,7 +36,7 @@ class SearchController < ApplicationController
       by_name.each { |p| p.add_attrs :priority => 1 }
       by_category.each do |p|
         categories = (categories_indexed p).
-          find_all { |c| search_query_pattern.match(c[:name]) }.
+          find_all { |c| search_query_pattern.match c[:name] }.
           sort! { |a, b| a[:priority] <=> b[:priority] }
         p.add_attrs :priority => categories[0][:priority]
       end
@@ -59,7 +59,7 @@ class SearchController < ApplicationController
       categories = Product.
         where(:category => search_query_pattern).
         fields(:category).all.
-        map { |p| (categories_indexed p).find_all { |h| search_query_pattern.match(h[:name]) } }.
+        map { |p| (categories_indexed p).find_all { |h| search_query_pattern.match h[:name] } }.
         flatten
 
       (products + categories).

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 16 Jun 2011 03:05:09 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 06:01:13 GMT from
  * /apps/shop_guide/app/coffeescripts/app/app.coffee
  */
 
@@ -28,7 +28,7 @@
             ref: 'search-box',
             border: false,
             split: true,
-            margins: '40 450 50 5'
+            margin: '30 140 25 140'
           }, {
             region: 'west',
             border: false,
