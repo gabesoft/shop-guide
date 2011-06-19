@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 06:08:55 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 06:14:28 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -29,6 +29,7 @@
         hideLabel: true,
         hideTrigger: true,
         typeAhead: false,
+        queryDelay: 300,
         minChars: 3,
         store: store,
         emptyText: 'Enter a product, category, or manufacturer',
