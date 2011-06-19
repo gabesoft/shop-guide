@@ -2,6 +2,14 @@ Ext.define 'SG.view.SearchBox'
   extend: 'Ext.form.ComboBox'
   alias: 'widget.search-box'
   fieldLabel: 'Search Products'
+  emptyText: 'Enter a product, category, or manufacturer'
+  autoSelect: false
+  forceSelection: false
+  hideLabel: true
+  hideTrigger: true
+  typeAhead: false
+  queryDelay: 200
+  minChars: 3
 
   initComponent: () ->
     store = Ext.create('Ext.data.Store',
@@ -15,22 +23,14 @@ Ext.define 'SG.view.SearchBox'
     )
 
     Ext.apply(this,
-      autoSelect: false
-      forceSelection: false
-      hideLabel: true
-      hideTrigger: true
-      typeAhead: false
-      queryDelay: 200
-      minChars: 3
       store: store
-      emptyText: 'Enter a product, category, or manufacturer'
       queryMode: 'remote'
       displayField: 'name'
       valueField: 'name'
       listConfig:
         loadingText: 'Searching...'
         emptyText: 'No matching products found'
-      )
+    )
 
     @callParent()
     @addEvents('search': true)

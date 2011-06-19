@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 16:31:45 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 17:11:18 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/SearchBox.coffee
  */
 
@@ -8,6 +8,14 @@
     extend: 'Ext.form.ComboBox',
     alias: 'widget.search-box',
     fieldLabel: 'Search Products',
+    emptyText: 'Enter a product, category, or manufacturer',
+    autoSelect: false,
+    forceSelection: false,
+    hideLabel: true,
+    hideTrigger: true,
+    typeAhead: false,
+    queryDelay: 200,
+    minChars: 3,
     initComponent: function() {
       var query, store;
       store = Ext.create('Ext.data.Store', {
@@ -24,15 +32,7 @@
         }
       });
       Ext.apply(this, {
-        autoSelect: false,
-        forceSelection: false,
-        hideLabel: true,
-        hideTrigger: true,
-        typeAhead: false,
-        queryDelay: 200,
-        minChars: 3,
         store: store,
-        emptyText: 'Enter a product, category, or manufacturer',
         queryMode: 'remote',
         displayField: 'name',
         valueField: 'name',

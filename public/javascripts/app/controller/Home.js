@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 06:22:18 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 17:11:18 GMT from
  * /apps/shop_guide/app/coffeescripts/app/controller/Home.coffee
  */
 
