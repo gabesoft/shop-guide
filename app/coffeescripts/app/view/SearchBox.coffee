@@ -20,7 +20,7 @@ Ext.define 'SG.view.SearchBox'
       hideLabel: true
       hideTrigger: true
       typeAhead: false
-      queryDelay: 300
+      queryDelay: 200
       minChars: 3
       store: store
       emptyText: 'Enter a product, category, or manufacturer'
