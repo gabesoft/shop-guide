@@ -61,6 +61,12 @@ describe SearchController do
       hints = JSON.parse response.body
       hints.should eq [ { "name" => "spice product", "priority" => 999 } ]
     end
+
+    it "should return no hints for an empty query" do
+      get :producthints, :query => '', :format => :json
+      hints = JSON.parse response.body
+      hints.should eq []
+    end
   end
 
   describe "GET products" do
@@ -77,6 +83,12 @@ describe SearchController do
         { :name => 'brazilian vanilla', :priority => 999 },
         { :name => 'chinese vanilla',   :priority => 999 },
       ]
+    end
+
+    it "should return no products for an empty query" do
+      get :products, :query => 'prod', :format => :json
+      products = JSON.parse response.body
+      products.should eq []
     end
   end
 end

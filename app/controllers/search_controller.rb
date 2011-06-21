@@ -20,52 +20,46 @@ class SearchController < ApplicationController
     params[:query] ? params[:query] : ''
   end
 
-  def search_query_pattern
+  def search_pattern
     /#{Regexp.quote search_query}/i
   end
 
   def get_products
-    if search_query.empty?
-      []
-    else
-      by_name = Product.where(:name => search_query_pattern).all
-      by_category = Product.
-        where(:category => search_query_pattern).all.
-        find_all { |p| !search_query_pattern.match p[:name] }
+    return [] if search_query.empty?
 
-      by_name.each { |p| p.add_attrs :priority => 1 }
-      by_category.each do |p|
-        categories = (categories_indexed p).
-          find_all { |c| search_query_pattern.match c[:name] }.
-          sort! { |a, b| a[:priority] <=> b[:priority] }
-        p.add_attrs :priority => categories[0][:priority]
-      end
+    by_name = Product.where(:name => search_pattern).all
+    by_category = Product.where(:category => search_pattern, :name => { :$not => search_pattern }).all
 
-      (by_name + by_category).
-        sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ] }.
-        map { |p| { :id => p.id, :name => p.name, :priority => p.priority, :category => p.category } }
+    by_name.each { |p| p.add_attrs :priority => 1 }
+    by_category.each do |p|
+      categories = (categories_indexed p).
+        find_all { |c| search_pattern.match c[:name] }.
+        sort! { |a, b| a[:priority] <=> b[:priority] }
+      p.add_attrs :priority => categories[0][:priority]
     end
+
+    (by_name + by_category).
+      sort { |a, b| [ a.priority, a.name ] <=> [ b.priority, b.name ] }.
+      map { |p| { :id => p.id, :name => p.name, :priority => p.priority, :category => p.category } }
   end
 
   def get_hints
-    if search_query.empty?
-      []
-    else
-      products = Product.
-        where(:name => search_query_pattern).
-        fields(:name, :category).
-        limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
+    return [] if search_query.empty?
 
-      categories = Product.
-        where(:category => search_query_pattern).
-        fields(:category).all.
-        map { |p| (categories_indexed p).find_all { |h| search_query_pattern.match h[:name] } }.
-        flatten
+    products = Product.
+      where(:name => search_pattern).
+      fields(:name, :category).
+      limit(10).all.map { |p| { :name => p.name, :priority => 1 } }
 
-      (products + categories).
-        uniq { |c| c[:name] }.
-        sort! { |a, b| [ a[:priority], a[:name] ] <=> [ b[:priority], b[:name] ] }
-    end
+    categories = Product.
+      where(:category => search_pattern).
+      fields(:category).all.
+      map { |p| (categories_indexed p).find_all { |h| search_pattern.match h[:name] } }.
+      flatten
+
+    (products + categories).
+      uniq { |c| c[:name] }.
+      sort! { |a, b| [ a[:priority], a[:name] ] <=> [ b[:priority], b[:name] ] }
   end
 
   def categories_indexed product
