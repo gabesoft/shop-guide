@@ -64,7 +64,7 @@ class SearchController < ApplicationController
         map { |c| child_category(c, parent) }
     end
 
-    categories.uniq.sort.map { |c| { :name => c } }
+    categories.uniq.sort.map { |c| { :name => (leaf_category c), :value => c } }
   end
 
   def root_category category 
@@ -75,6 +75,11 @@ class SearchController < ApplicationController
   def child_category category, parent
     index = category.index(':', parent.length + 1) || category.length
     category[ 0 ... index ]
+  end
+
+  def leaf_category category
+    index = category.rindex(':')
+    return index.nil? ? category : category[(index + 1)... category.length]
   end
 
   def search_query

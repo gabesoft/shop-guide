@@ -14,7 +14,6 @@ Ext.define 'SG.view.CategoryList'
 
     Ext.apply(this,
       store: store
-      title: 'Categories'
       viewConfig:
         emptyText: 'No categories to display'
         stripeRows: false
@@ -27,9 +26,29 @@ Ext.define 'SG.view.CategoryList'
           dataIndex: 'name' 
           flex: 1 
           renderer: (value) ->
-            Ext.String.format('<a href="#">{0}</a>', value)
+            Ext.String.format('<a href="#" action="{0}">{0}</a>', value)
         }
       ]
+      #header: Ext.create 'Ext.panel.Header',
+        #title: 'Categories'
+        #orientation: 'horizontal'
+        #dock: 'top'
+        #listeners: 
+          #click: () -> console.log 'header.click'
+      listeners: 
+          click: () -> console.log 'click', arguments
+          containerclick: () -> console.log 'containerclick', arguments
+          headerclick: () -> console.log 'headerclick', arguments
+          itemclick: (component, record, item, index, e, options) -> 
+            component.store.load 
+              params : 
+                parent : record.data.value
+            console.log component
+            component.panel.setTitle '<< ' + record.data.name
     )
 
     @callParent()
+    store.load()
+
+    @setTitle 'Categories'
+    @header.on 'click', () -> console.log 'header.click'

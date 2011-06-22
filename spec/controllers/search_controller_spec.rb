@@ -104,9 +104,9 @@ describe SearchController do
       get :categories, :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'baby' },
-        { 'name' => 'bath' },
-        { 'name' => 'food' } 
+        { 'value' => 'baby', 'name' => 'baby' },
+        { 'value' => 'bath', 'name' => 'bath' },
+        { 'value' => 'food', 'name' => 'food' } 
       ]
     end
 
@@ -115,10 +115,10 @@ describe SearchController do
       get :categories, :sibling => "food:sweets:cookies", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'food:sweets:biscotti' },
-        { 'name' => 'food:sweets:cake frosting' },
-        { 'name' => 'food:sweets:chocolate' },
-        { 'name' => 'food:sweets:cookies' },
+        { 'name' => 'biscotti',       'value' => 'food:sweets:biscotti' },
+        { 'name' => 'cake frosting',  'value' => 'food:sweets:cake frosting' },
+        { 'name' => 'chocolate',      'value' => 'food:sweets:chocolate' },
+        { 'name' => 'cookies',        'value' => 'food:sweets:cookies' },
       ]
     end
 
@@ -126,7 +126,9 @@ describe SearchController do
       create_products
       get :categories, :parent => "food:other", :format => :json
       categories = JSON.parse response.body
-      categories.should eq [ 'name' => 'food:other:product' ]
+      categories.should eq [ 
+        { 'name' => 'product', 'value' => 'food:other:product' } 
+      ]
     end
 
     it "should return all children categories when parent is specified" do
@@ -134,12 +136,12 @@ describe SearchController do
       get :categories, :parent => "food", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'food:breakfast' },
-        { 'name' => 'food:dairy' },
-        { 'name' => 'food:other' },
-        { 'name' => 'food:prod cat 1' },
-        { 'name' => 'food:spice product' },
-        { 'name' => 'food:sweets' },
+        { 'name' => 'breakfast',      'value' => 'food:breakfast' },
+        { 'name' => 'dairy',          'value' => 'food:dairy' },
+        { 'name' => 'other',          'value' => 'food:other' },
+        { 'name' => 'prod cat 1',     'value' => 'food:prod cat 1' },
+        { 'name' => 'spice product',  'value' => 'food:spice product' },
+        { 'name' => 'sweets',         'value' => 'food:sweets' },
       ]
     end
   end
