@@ -15,6 +15,7 @@ ShopGuide::Application.routes.draw do
 
   get "search/products", :to => "search#products"
   get "search/producthints", :to => "search#producthints"
+  get "search/categories", :to => "search#categories"
 
   #post "products/clear", :to => "products#destroy_all"
   #get "products/all.json", :to => "products#extract_all", :as => :products_all

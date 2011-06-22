@@ -14,7 +14,67 @@ class SearchController < ApplicationController
     end
   end
 
+  def categories
+    respond_to do |format|
+      format.json { render :json => get_categories }
+      format.all { render :text => "only JSON format is supported" }
+    end
+  end
+
   private
+
+  def sibling
+    params[:sibling]
+  end
+
+  def parent
+    params[:parent]
+  end
+
+  def get_categories
+    return get_sibling_categories unless sibling.blank?
+    return get_children_categories unless parent.blank?
+    return get_root_categories
+  end
+
+  def get_sibling_categories
+    parent = sibling[0...(sibling.rindex ':')]
+    get_categories_by_parent parent
+  end
+
+  def get_children_categories
+    get_categories_by_parent parent
+  end
+
+  def get_root_categories
+    get_categories_by_parent nil
+  end
+
+  def get_categories_by_parent parent
+    categories = []
+
+    if parent.blank? 
+      categories = Product.fields(:category).all.map(&:category).uniq.map { |c| root_category c }
+    else
+      pattern = /^#{Regexp.quote parent}/
+      categories = Product.where(:category => pattern).
+        fields(:category).all.map(&:category).uniq.
+        find_all { |c| c.length > parent.length + 1 }.
+        map { |c| child_category(c, parent) }
+    end
+
+    categories.uniq.sort
+  end
+
+  def root_category category 
+    index = category.index(':') || category.length
+    category[ 0 ... index ]
+  end
+
+  def child_category category, parent
+    index = category.index(':', parent.length + 1) || category.length
+    category[ 0 ... index ]
+  end
 
   def search_query
     params[:query] ? params[:query] : ''
@@ -25,7 +85,7 @@ class SearchController < ApplicationController
   end
 
   def get_products
-    return [] if search_query.empty?
+    return [] if search_query.blank?
 
     by_name = Product.where(:name => search_pattern).all
     by_category = Product.where(:category => search_pattern, :name => { :$not => search_pattern }).all
@@ -44,7 +104,7 @@ class SearchController < ApplicationController
   end
 
   def get_hints
-    return [] if search_query.empty?
+    return [] if search_query.blank?
 
     products = Product.
       where(:name => search_pattern).
