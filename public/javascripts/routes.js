@@ -12,4 +12,5 @@ function edit_product_path(params){ return '/products/' + params.id + '/edit' + 
 function product_path(params){ return '/products/' + params.id + '' + (params && params.format ? '.' + params.format : ''); }
 function search_products_path(params){ return '/search/products' + (params && params.format ? '.' + params.format : ''); }
 function search_producthints_path(params){ return '/search/producthints' + (params && params.format ? '.' + params.format : ''); }
+function search_categories_path(params){ return '/search/categories' + (params && params.format ? '.' + params.format : ''); }
 function rails_info_properties_path(params){ return '/rails/info/properties' + (params && params.format ? '.' + params.format : ''); }

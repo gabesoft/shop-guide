@@ -56,14 +56,15 @@ class SearchController < ApplicationController
     if parent.blank? 
       categories = Product.fields(:category).all.map(&:category).uniq.map { |c| root_category c }
     else
-      pattern = /^#{Regexp.quote parent}/
+      pattern = /^#{Regexp.quote parent}/;
+
       categories = Product.where(:category => pattern).
         fields(:category).all.map(&:category).uniq.
         find_all { |c| c.length > parent.length + 1 }.
         map { |c| child_category(c, parent) }
     end
 
-    categories.uniq.sort
+    categories.uniq.sort.map { |c| { :name => c } }
   end
 
   def root_category category 

@@ -103,7 +103,11 @@ describe SearchController do
       create_products
       get :categories, :format => :json
       categories = JSON.parse response.body
-      categories.should eq [ "baby", "bath", "food" ]
+      categories.should eq [ 
+        { 'name' => 'baby' },
+        { 'name' => 'bath' },
+        { 'name' => 'food' } 
+      ]
     end
 
     it "should return all sibling categories when sibling is specified" do
@@ -111,10 +115,10 @@ describe SearchController do
       get :categories, :sibling => "food:sweets:cookies", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        "food:sweets:biscotti",
-        "food:sweets:cake frosting",
-        "food:sweets:chocolate",
-        "food:sweets:cookies",
+        { 'name' => 'food:sweets:biscotti' },
+        { 'name' => 'food:sweets:cake frosting' },
+        { 'name' => 'food:sweets:chocolate' },
+        { 'name' => 'food:sweets:cookies' },
       ]
     end
 
@@ -122,7 +126,7 @@ describe SearchController do
       create_products
       get :categories, :parent => "food:other", :format => :json
       categories = JSON.parse response.body
-      categories.should eq [ "food:other:product" ]
+      categories.should eq [ 'name' => 'food:other:product' ]
     end
 
     it "should return all children categories when parent is specified" do
@@ -130,12 +134,12 @@ describe SearchController do
       get :categories, :parent => "food", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        "food:breakfast",
-        "food:dairy",
-        "food:other",
-        "food:prod cat 1",
-        "food:spice product",
-        "food:sweets",
+        { 'name' => 'food:breakfast' },
+        { 'name' => 'food:dairy' },
+        { 'name' => 'food:other' },
+        { 'name' => 'food:prod cat 1' },
+        { 'name' => 'food:spice product' },
+        { 'name' => 'food:sweets' },
       ]
     end
   end

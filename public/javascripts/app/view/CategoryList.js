@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 12 Jun 2011 17:39:07 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 22 Jun 2011 05:09:10 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/CategoryList.coffee
  */
 
@@ -9,20 +9,17 @@
     initComponent: function() {
       var store;
       store = Ext.create('Ext.data.Store', {
-        fields: ['name'],
-        data: [
-          {
-            name: 'dairy'
-          }, {
-            name: 'eggs'
-          }, {
-            name: 'wine'
-          }, {
-            name: 'baby'
-          }, {
-            name: 'liquor'
+        model: 'SG.model.Category',
+        proxy: {
+          type: 'ajax',
+          method: 'GET',
+          url: search_categories_path({
+            format: 'json'
+          }),
+          reader: {
+            type: 'json'
           }
-        ]
+        }
       });
       Ext.apply(this, {
         store: store,

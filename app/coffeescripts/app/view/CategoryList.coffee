@@ -3,14 +3,13 @@ Ext.define 'SG.view.CategoryList'
   alias: 'widget.category-list'
   initComponent: () ->
     store = Ext.create('Ext.data.Store',
-      fields: ['name']
-      data: [
-        { name: 'dairy' }
-        { name: 'eggs' }
-        { name: 'wine' }
-        { name: 'baby' }
-        { name: 'liquor' }
-      ]
+      model: 'SG.model.Category'
+      proxy: 
+        type: 'ajax'
+        method: 'GET'
+        url: search_categories_path(format: 'json')
+        reader:
+          type: 'json'
     )
 
     Ext.apply(this,
