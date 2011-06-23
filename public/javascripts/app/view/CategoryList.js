@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 04:42:35 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 14:28:04 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/CategoryList.coffee
  */
 
@@ -37,7 +37,6 @@
             dataIndex: 'name',
             flex: 1,
             renderer: function(value, meta, record) {
-              console.log(record.data);
               if (record.data.leaf) {
                 return Ext.String.format('<span>{0}</span>', value);
               } else {
