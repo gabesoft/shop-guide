@@ -37,7 +37,7 @@ Ext.application(
           region: 'west'
           border: false
           xtype: 'category-list'
-          margins: '5 5 5 5'
+          margins: '5 5 250 5'
           flex: 1
         }
         {

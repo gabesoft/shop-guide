@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 17 Jun 2011 05:10:18 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 04:35:03 GMT from
  * /apps/shop_guide/app/coffeescripts/app/model/Hint.coffee
  */
 

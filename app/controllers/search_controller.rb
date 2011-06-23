@@ -38,7 +38,7 @@ class SearchController < ApplicationController
   end
 
   def get_sibling_categories
-    parent = sibling[0...(sibling.rindex ':')]
+    parent = parent_category sibling
     get_categories_by_parent parent
   end
 
@@ -51,25 +51,33 @@ class SearchController < ApplicationController
   end
 
   def get_categories_by_parent parent
+    raw = []
     categories = []
 
-    if parent.blank? 
-      categories = Product.fields(:category).all.map(&:category).uniq.map { |c| root_category c }
+    if parent.blank?
+      raw = Product.fields(:category).all.map(&:category).uniq
+      categories = raw.map { |c| root_category c }
     else
       pattern = /^#{Regexp.quote parent}/;
-
-      categories = Product.where(:category => pattern).
-        fields(:category).all.map(&:category).uniq.
-        find_all { |c| c.length > parent.length + 1 }.
-        map { |c| child_category(c, parent) }
+      raw = Product.where(:category => pattern).fields(:category).all.map(&:category).uniq
+      categories = raw.find_all { |c| c.length > parent.length + 1 }.map { |c| child_category(c, parent) }
     end
 
-    categories.uniq.sort.map { |c| { :name => (leaf_category c), :value => c } }
+    categories.uniq.sort.map { |c| { 
+      :name => (leaf_category c), 
+      :leaf => !raw.any? { |r| r.start_with? (c + ':') },
+      :value => c } 
+    }
   end
 
-  def root_category category 
+  def root_category category
     index = category.index(':') || category.length
     category[ 0 ... index ]
+  end
+
+  def parent_category category
+    index = category.rindex(':')
+    return index.nil? ? '' : category[ 0 ... index ]
   end
 
   def child_category category, parent

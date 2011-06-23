@@ -4,7 +4,7 @@ Ext.define 'SG.view.CategoryList'
   initComponent: () ->
     store = Ext.create('Ext.data.Store',
       model: 'SG.model.Category'
-      proxy: 
+      proxy:
         type: 'ajax'
         method: 'GET'
         url: search_categories_path(format: 'json')
@@ -22,33 +22,42 @@ Ext.define 'SG.view.CategoryList'
       hideHeaders: true
       columnLines: false
       columns: [
-        { 
-          dataIndex: 'name' 
-          flex: 1 
-          renderer: (value) ->
-            Ext.String.format('<a href="#" action="{0}">{0}</a>', value)
+        {
+          dataIndex: 'name'
+          flex: 1
+          renderer: (value, meta, record) ->
+            console.log record.data
+            if record.data.leaf
+            then Ext.String.format '<span>{0}</span>', value
+            else Ext.String.format '<a href="#" action="{0}">{0}</a>', value
         }
       ]
-      #header: Ext.create 'Ext.panel.Header',
-        #title: 'Categories'
-        #orientation: 'horizontal'
-        #dock: 'top'
-        #listeners: 
-          #click: () -> console.log 'header.click'
-      listeners: 
-          click: () -> console.log 'click', arguments
-          containerclick: () -> console.log 'containerclick', arguments
-          headerclick: () -> console.log 'headerclick', arguments
-          itemclick: (component, record, item, index, e, options) -> 
-            component.store.load 
-              params : 
-                parent : record.data.value
-            console.log component
-            component.panel.setTitle '<< ' + record.data.name
+      listeners:
+          itemclick: (component, record, item, index, e, options) ->
+            if record.data.leaf then
+              #TODO: get praducts for category
+            else
+              #TODO: get praducts for category
+              component.store.load
+                params:
+                  parent: record.data.value
+              component.panel.setTitle '<< ' + record.data.name
+              @recordStack.push record.data
     )
 
     @callParent()
     store.load()
 
+    @recordStack = []
     @setTitle 'Categories'
-    @header.on 'click', () -> console.log 'header.click'
+    @header.on 'click', () =>
+      if @recordStack.length > 0
+        record = @recordStack.pop()
+        parent = @recordStack[@recordStack.length - 1]
+        @setTitle if parent then '<< ' + parent.name else 'Categories'
+        @store.load
+          params:
+            sibling: record.value
+
+
+

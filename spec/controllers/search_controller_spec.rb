@@ -104,9 +104,9 @@ describe SearchController do
       get :categories, :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'value' => 'baby', 'name' => 'baby' },
-        { 'value' => 'bath', 'name' => 'bath' },
-        { 'value' => 'food', 'name' => 'food' } 
+        { 'value' => 'baby', 'leaf' => true,  'name' => 'baby' },
+        { 'value' => 'bath', 'leaf' => false, 'name' => 'bath' },
+        { 'value' => 'food', 'leaf' => false, 'name' => 'food' } 
       ]
     end
 
@@ -115,10 +115,21 @@ describe SearchController do
       get :categories, :sibling => "food:sweets:cookies", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'biscotti',       'value' => 'food:sweets:biscotti' },
-        { 'name' => 'cake frosting',  'value' => 'food:sweets:cake frosting' },
-        { 'name' => 'chocolate',      'value' => 'food:sweets:chocolate' },
-        { 'name' => 'cookies',        'value' => 'food:sweets:cookies' },
+        { 'name' => 'biscotti',      'leaf' => true, 'value' => 'food:sweets:biscotti' },
+        { 'name' => 'cake frosting', 'leaf' => true, 'value' => 'food:sweets:cake frosting' },
+        { 'name' => 'chocolate',     'leaf' => true, 'value' => 'food:sweets:chocolate' },
+        { 'name' => 'cookies',       'leaf' => true, 'value' => 'food:sweets:cookies' },
+      ]
+    end
+
+    it "should return all root categories when root sibling is specified" do
+      create_products
+      get :categories, :sibling => "food", :format => :json
+      categories = JSON.parse response.body
+      categories.should eq [
+        { 'name' => 'baby', 'leaf' => true, 'value' => 'baby' },
+        { 'name' => 'bath', 'leaf' => false, 'value' => 'bath' },
+        { 'name' => 'food', 'leaf' => false, 'value' => 'food' },
       ]
     end
 
@@ -127,7 +138,7 @@ describe SearchController do
       get :categories, :parent => "food:other", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'product', 'value' => 'food:other:product' } 
+        { 'name' => 'product', 'leaf' => false, 'value' => 'food:other:product' } 
       ]
     end
 
@@ -136,12 +147,12 @@ describe SearchController do
       get :categories, :parent => "food", :format => :json
       categories = JSON.parse response.body
       categories.should eq [ 
-        { 'name' => 'breakfast',      'value' => 'food:breakfast' },
-        { 'name' => 'dairy',          'value' => 'food:dairy' },
-        { 'name' => 'other',          'value' => 'food:other' },
-        { 'name' => 'prod cat 1',     'value' => 'food:prod cat 1' },
-        { 'name' => 'spice product',  'value' => 'food:spice product' },
-        { 'name' => 'sweets',         'value' => 'food:sweets' },
+        { 'name' => 'breakfast',     'leaf' => false, 'value' => 'food:breakfast' },
+        { 'name' => 'dairy',         'leaf' => false, 'value' => 'food:dairy' },
+        { 'name' => 'other',         'leaf' => false, 'value' => 'food:other' },
+        { 'name' => 'prod cat 1',    'leaf' => false, 'value' => 'food:prod cat 1' },
+        { 'name' => 'spice product', 'leaf' => false, 'value' => 'food:spice product' },
+        { 'name' => 'sweets',        'leaf' => false, 'value' => 'food:sweets' },
       ]
     end
   end

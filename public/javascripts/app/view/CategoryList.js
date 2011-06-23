@@ -1,8 +1,9 @@
-/* DO NOT MODIFY. This file was compiled Wed, 22 Jun 2011 14:59:42 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 04:42:35 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/CategoryList.coffee
  */
 
 (function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   Ext.define('SG.view.CategoryList', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.category-list',
@@ -35,38 +36,49 @@
           {
             dataIndex: 'name',
             flex: 1,
-            renderer: function(value) {
-              return Ext.String.format('<a href="#" action="{0}">{0}</a>', value);
+            renderer: function(value, meta, record) {
+              console.log(record.data);
+              if (record.data.leaf) {
+                return Ext.String.format('<span>{0}</span>', value);
+              } else {
+                return Ext.String.format('<a href="#" action="{0}">{0}</a>', value);
+              }
             }
           }
         ],
         listeners: {
-          click: function() {
-            return console.log('click', arguments);
-          },
-          containerclick: function() {
-            return console.log('containerclick', arguments);
-          },
-          headerclick: function() {
-            return console.log('headerclick', arguments);
-          },
           itemclick: function(component, record, item, index, e, options) {
-            component.store.load({
-              params: {
-                parent: record.data.value
-              }
-            });
-            console.log(component);
-            return component.panel.setTitle('<< ' + record.data.name);
+            if (record.data.leaf) {
+              ;
+            } else {
+              component.store.load({
+                params: {
+                  parent: record.data.value
+                }
+              });
+              component.panel.setTitle('<< ' + record.data.name);
+              return this.recordStack.push(record.data);
+            }
           }
         }
       });
       this.callParent();
       store.load();
+      this.recordStack = [];
       this.setTitle('Categories');
-      return this.header.on('click', function() {
-        return console.log('header.click');
-      });
+      return this.header.on('click', __bind(function() {
+        var parent, record;
+        if (this.recordStack.length > 0) {
+          record = this.recordStack.pop();
+          parent = this.recordStack[this.recordStack.length - 1];
+          this.setTitle(parent ? '<< ' + parent.name : 'Categories');
+          return this.store.load({
+            params: {
+              sibling: record.value
+            }
+          });
+        }
+      }, this));
     }
   });
 }).call(this);
