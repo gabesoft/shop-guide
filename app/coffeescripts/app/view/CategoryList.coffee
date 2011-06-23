@@ -26,7 +26,6 @@ Ext.define 'SG.view.CategoryList'
           dataIndex: 'name'
           flex: 1
           renderer: (value, meta, record) ->
-            console.log record.data
             if record.data.leaf
             then Ext.String.format '<span>{0}</span>', value
             else Ext.String.format '<a href="#" action="{0}">{0}</a>', value
