@@ -28,7 +28,7 @@ Ext.define 'SG.view.CategoryList'
           renderer: (value, meta, record) ->
             if record.data.leaf
             then Ext.String.format '<span>{0}</span>', value
-            else Ext.String.format '<a href="#" action="{0}">{0}</a>', value
+            else Ext.String.format '<a action="{0}">{0}</a>', value
         }
       ]
       listeners:

@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 14:28:04 GMT from
+/* DO NOT MODIFY. This file was compiled Fri, 24 Jun 2011 17:34:28 GMT from
  * /apps/shop_guide/app/coffeescripts/app/view/CategoryList.coffee
  */
 
@@ -40,7 +40,7 @@
               if (record.data.leaf) {
                 return Ext.String.format('<span>{0}</span>', value);
               } else {
-                return Ext.String.format('<a href="#" action="{0}">{0}</a>', value);
+                return Ext.String.format('<a action="{0}">{0}</a>', value);
               }
             }
           }
