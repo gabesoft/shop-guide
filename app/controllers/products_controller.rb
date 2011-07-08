@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   before_filter :find_by_slug, :only => [ :show, :edit, :update, :destroy ]
 
   def index
-    @products = Product.sort(:name).all
+    @products = Product.sort(:name).limit(100).all
+    @product_count = Product.count
 
     respond_to do |format|
       format.html
